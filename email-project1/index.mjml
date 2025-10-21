@@ -1,0 +1,150 @@
+<mjml>
+  <mj-head>
+    <mj-preview>Your preview text goes here</mj-preview>
+    <!-- Import Montserrat -->
+    <mj-font name="Montserrat" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" />
+    <mj-breakpoint width="480px" />
+    <mj-attributes>
+      <mj-all font-family="'Montserrat', Arial, sans-serif" padding="0" />
+    </mj-attributes>
+    <!-- Button class -->
+    <mj-attributes>
+      <mj-class name="primary-button" background-color="#002b45" color="#ffffff" font-weight="700" font-size="16px" line-height="20px" border-radius="0px" text-transform="uppercase" padding="0px 0px" height="60px" align="center" />
+    </mj-attributes>
+
+    <mj-style inline="inline">
+      .mtext12 { font-size: 12px; line-height: 24px; font-weight: 400; } .mtext18 { font-size: 18px; line-height: 20px; font-weight: 400; } .mtext16 { font-size: 16px; line-height: 20px; font-weight: 400; } .mtext18 { font-size: 18px; line-height: 20px; font-weight: 400; } .mtext20 { font-size: 20px; line-height: 24px; font-weight: 400; } .mtext36 { font-size: 36px;
+      line-height: 40px; } .mtext40 { font-size: 40px; line-height: 44px; } .primary-color { color: #002b45;} .secondary-blue { color: #135277;} .primary-grey { color: #616161;} .secondary-grey { color: #565656;} .white { color: #ffffff;}
+      .bold {font-weight: 700;} .uppercase {text-transform: uppercase;} .text-center{text-align: center;} .full-pad-block-left-right { padding-left: 20px !important; padding-right: 20px !important; } .footer-links { text-align:center; }
+      .footer-link { display:inline-block; margin:0 20px 20px 0; text-align:left; font-size:16px; line-height: 20px; font-weight: 700; color:#ffffff; text-decoration:none; } .social-icons { text-align: center; } .social-icon { display:
+      inline-block; width: 28px; height: 28px; margin: 0 20px 20px 0; }
+    </mj-style>
+
+    <mj-style>
+      @media only screen and (min-width:480px) { .full-pad-block-left-right { padding-left: 0px !important; padding-right: 0px !important; } .pad-block-left-right { padding-left: 30px !important; padding-right: 30px !important; }
+      .padding-right20 {padding-right: 20px !important;} .padding-left20 {padding-left: 20px !important;} .text18{font-size: 18px !important; line-height: 20px !important;} .text24{font-size: 24px !important; line-height: 28px !important;}
+      .text40{font-size: 40px !important; line-height: 44px !important;} .text48{font-size: 48px !important; line-height: 48px !important;} .text-left{text-align: left !important;} .footer-link { font-size:20px !important; line-height: 24px
+      !important; } .social-icon { width: 36px !important; height: 36px !important; margin: 0 30px 20px 0 !important; }}
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-wrapper border="1px solid #616161">
+      <mj-section>
+        <mj-column width="100%">
+          <mj-image href="https://www.yeti.com/" src="./yeti-logo-header.jpg" alt="Yeti Logo" />
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="pad-block-left-right" background-color="#f2f2f2" padding-top="30px" padding-bottom="0px" padding-left="20px" padding-right="20px">
+        <mj-column>
+          <mj-text>
+            <h2 class="mtext36 text40 primary-color bold uppercase text-center" style="margin-top: 0px; margin-bottom: 20px">Built to carry&nbsp;more</h2>
+
+            <p class="mtext16 primary-color text-center" style="margin-top: 0px; margin-bottom: 20px">Tough enough for the outdoors, sleek enough for everyday life. These totes are ready for whatever you throw its way.</p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section background-color="#f2f2f2">
+        <mj-column css-class="pad-block-left-right" width="310px" padding-left="20px" padding-right="20px" padding-bottom="30px">
+          <mj-button href="https://www.yeti.com/bags/tote-bags" mj-class="primary-button" width="100%"> Tote with confidence </mj-button>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column width="100%">
+          <mj-image src="./yeti-tote-bag-hero.jpg" alt="Yeti tote" />
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="pad-block-left-right" background-color="#ffffff" padding-top="50px" padding-bottom="50px" padding-left="20px" padding-right="20px">
+        <mj-column>
+          <mj-text>
+            <h3 class="mtext20 text24 primary-color bold uppercase text-center" style="margin-top: 0px; margin-bottom: 0px">Pack More. Do More. Go&nbsp;Further.</h3>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="full-pad-block-left-right" background-color="#ffffff" padding-top="0px" padding-bottom="30px" padding-left="0px" padding-right="0px">
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-image fluid-on-mobile="true" src="./yeti-20-carryall-tote-bag.jpg" alt="Yeti tote" />
+        </mj-column>
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-text>
+            <p class="mtext16 text18 primary-grey text-center text-left padding-left20 padding-right20" style="margin-top: 0px; margin-bottom: 10px">Move Freely, Pack Easily</p>
+            <h4 class="mtext20 primary-color bold text-center text-left padding-left20 padding-right20" style="margin-top: 0px; margin-bottom: 10px">Camino 20 Carryall</h4>
+          </mj-text>
+          <mj-image css-class="text-left padding-left20 padding-right20" width="95px" src="./5-star-icon.png" alt="Yeti tote" />
+          <mj-text>
+            <p class="mtext16 secondary-grey text-center text-left padding-left20 padding-right20" style="margin-top: 20px; margin-bottom: 30px">
+              The grab-and-go essential for your daily hustle. Coffee runs, gym gear, and everything in between.
+            </p>
+          </mj-text>
+          <mj-button href="https://www.yeti.com/bags/tote-bags/18060131799.html" css-class="padding-left20 padding-right20" mj-class="primary-button" width="100%"> Grab and go </mj-button>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="full-pad-block-left-right" background-color="#ffffff" padding-top="0px" padding-bottom="30px" padding-left="0px" padding-right="0px">
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-image fluid-on-mobile="true" src="./yeti-35-carryall-tote-bag.jpg" alt="Yeti tote" />
+        </mj-column>
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-text>
+            <p class="mtext16 text18 primary-grey text-center text-left padding-left20 padding-right20" style="margin-top: 0px; margin-bottom: 10px">Load Up and Explore</p>
+            <h4 class="mtext20 primary-color bold text-center text-left padding-left20 padding-right20" style="margin-top: 0px; margin-bottom: 10px">Camino 35 Carryall</h4>
+          </mj-text>
+          <mj-image css-class="text-left padding-left20 padding-right20" width="95px" src="./5-star-icon.png" alt="Yeti tote" />
+          <mj-text>
+            <p class="mtext16 secondary-grey text-center text-left padding-left20 padding-right20" style="margin-top: 20px; margin-bottom: 30px">Your weekend sidekick. Roomy enough for road trips, beach days, and spontaneous getaways.</p>
+          </mj-text>
+          <mj-button href="https://www.yeti.com/bags/tote-bags/18060131802.html" css-class="padding-left20 padding-right20" mj-class="primary-button" width="100%"> Pack for any trip </mj-button>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="full-pad-block-left-right" background-color="#ffffff" padding-top="0px" padding-bottom="30px" padding-left="0px" padding-right="0px">
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-image fluid-on-mobile="true" src="./yeti-50-carryall-tote-bag.jpg" alt="Yeti tote" />
+        </mj-column>
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-text>
+            <p class="mtext16 text18 primary-grey text-center text-left padding-left20 padding-right20" style="margin-top: 0px; margin-bottom: 10px">Haul Without Limits</p>
+            <h4 class="mtext20 primary-color bold text-center text-left padding-left20 padding-right20" style="margin-top: 0px; margin-bottom: 10px">Camino 50 Carryall</h4>
+          </mj-text>
+          <mj-image css-class="text-left padding-left20 padding-right20" width="95px" src="./5-star-icon.png" alt="Yeti tote" />
+          <mj-text>
+            <p class="mtext16 secondary-grey text-center text-left padding-left20 padding-right20" style="margin-top: 20px; margin-bottom: 30px">The ultimate adventure bag. Built for the wild, rugged enough for the unknown.</p>
+          </mj-text>
+          <mj-button href="https://www.yeti.com/bags/tote-bags/18060131811.html" css-class="padding-left20 padding-right20" mj-class="primary-button" width="100%"> Take on the wild </mj-button>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="pad-block-left-right" background-color="#135277" padding-top="30px" padding-bottom="40px" padding-left="20px" padding-right="20px">
+        <mj-column>
+          <mj-text>
+            <h2 class="mtext40 text48 white bold uppercase text-left" style="margin-top: 0px; margin-bottom: 50px"><a href="https://www.yeti.com/" style="text-decoration: none; color: #ffffff;">YETI</a></h2>
+          </mj-text>
+          <mj-text>
+            <a href="https://www.yeti.com/coolers" class="footer-link">Coolers</a>
+            <a href="https://www.yeti.com/drinkware" class="footer-link">Drinkware</a>
+            <a href="https://www.yeti.com/bags" class="footer-link">Bags</a>
+            <a href="https://www.yeti.com/cases-and-storage" class="footer-link">Cargo</a>
+            <a href="https://www.yeti.com/customize" class="footer-link">Custom</a>
+            <a href="https://www.yeti.com/find-a-store" class="footer-link">Store Locations</a>
+          </mj-text>
+          <mj-divider border-width="2px" border-style="solid" border-color="white" padding-top="10px" padding-bottom="50px" />
+          <mj-text css-class="social-icons" padding-bottom="10px">
+            <a href="https://www.instagram.com/yeti" class="social-icon">
+              <img src="./mdi_instagram.png" alt="Instagram" width="40" height="40" />
+            </a>
+            <a href="https://www.facebook.com/Yeti/" class="social-icon">
+              <img src="./ic_baseline-facebook.png" alt="Facebook" width="40" height="40" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCAZ5PoEUL2_clEdDBrFF-aQ" class="social-icon">
+              <img src="./line-md_youtube.png" alt="Youtube" width="40" height="40" />
+            </a>
+            <a href="https://www.tiktok.com/@yeti" class="social-icon">
+              <img src="./ic_baseline-tiktok.png" alt="Tiktok" width="40" height="40" />
+            </a>
+          </mj-text>
+          <mj-text>
+            <p class="mtext12 white" style="margin-bottom: 10px;">©2025 YETI Coolers, LLC. All Rights Reserved 7601 Southwest Parkway, Austin,&nbsp;TX&nbsp;78735</p>
+            <p class="mtext12 white" style="margin-bottom: 10px;">Need to contact us? <a href="https://www.yeti.com/contact-us.html" style="text-decoration: underline; color: #ffffff;">Reach Out Here</a></p>
+            <p class="mtext12 white" style="margin-bottom: 10px;"><span><a href="https://www.yeti.com/terms-conditions.html" style="text-decoration: none; color: #ffffff;">Terms</a></span> | <span><a href="https://privacyportal-uk.onetrust.com/webform/4f182994-8eb0-425e-8b18-28dabe88ca95/b836298d-c182-464c-b233-9e98f4c1f1f2" style="text-decoration: none; color: #ffffff;">My&nbsp;Preferences</a></span> | <span><a href="#" style="text-decoration: none; color: #ffffff;">Unsubscribe</span> | <span><a href="https://www.yeti.com/privacy-policy.html" style="text-decoration: none; color: #ffffff;">Privacy&nbsp;Policy</span></p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

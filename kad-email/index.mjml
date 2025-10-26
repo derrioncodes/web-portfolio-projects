@@ -1,0 +1,234 @@
+<mjml>
+  <mj-head>
+    <mj-preview>Your preview text goes here</mj-preview>
+    <!-- Import Montserrat -->
+    <mj-font name="Montserrat" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" />
+    <mj-breakpoint width="480px" />
+    <mj-attributes>
+      <mj-all font-family="'Montserrat', Arial, sans-serif" padding="0" />
+    </mj-attributes>
+    <!-- Button class -->
+    <mj-attributes>
+      <mj-class name="primary-button" background-color="#c41230" color="#ffffff" font-weight="700" font-size="14px" line-height="30px" letter-spacing=".5px" border-radius="0px" text-transform="uppercase" padding="0px 0px" height="44px" align="center" />
+    </mj-attributes>
+
+    <mj-style inline="inline">
+      sup{ font-size: 45%;}
+      .disclaimer-text { font-size: 12px; line-height: 15px; margin-bottom: 20px; color: #ffffff; text-align: center;} .mtext12 { font-size: 12px; line-height: 24px; font-weight: 400; } .mtext16 { font-size: 16px; line-height: 20px; font-weight: 400; } .mtext18 { font-size: 18px; line-height: 24px; font-weight: 400; } .mtext20 { font-size: 20px; line-height: 24px; font-weight: 400; } .mtext24 { font-size: 24px; line-height: 30px; font-weight: 400; } .mtext36 { font-size: 36px; line-height: 40px; } .mtext40 { font-size: 40px; line-height: 44px; } .text-color {color: #2E2E2E;} .primary-color { color: #002b45;} .secondary-blue { color: #135277;} .primary-grey { color: #616161;} .secondary-grey { color: #565656;} .white { color: #ffffff;}
+      .bold {font-weight: 700;} .uppercase {text-transform: uppercase;} .text-center{text-align: center;} .mtext-center{text-align: center;} .full-pad-block-left-right { padding-left: 20px !important; padding-right: 20px !important; } .inset-pad-block-left-right { padding-left: 20px !important; padding-right: 20px !important; } .footer-links { text-align:center; }
+      .footer-link { display:inline-block; margin:0 20px 20px 0; text-align:left; font-size:10px; line-height: 13px; font-weight: 700; color:#ffffff; text-decoration:none; text-transform: uppercase; } .social-icons { text-align: center; } .social-icon { display:
+      inline-block; width: 48px; height: 28px; margin: 0 0px 20px 0; } 
+    </mj-style>
+
+
+
+    <mj-style>
+      @media only screen and (min-width:480px) { .full-pad-block-left-right { padding-left: 0px !important; padding-right: 0px !important; } .inset-pad-block-left-right { padding-left: 30px !important; padding-right: 30px !important; } .pad-block-left-right { padding-left: 30px !important; padding-right: 30px !important; }
+      .padding-right20 {padding-right: 20px !important;} .padding-left20 {padding-left: 20px !important;} .padding-right30 {padding-right: 30px !important;} .padding-left30 {padding-left: 30px !important;} .text18{font-size: 18px !important; line-height: 20px !important;} .text24{font-size: 24px !important; line-height: 30px !important;}
+      .text40{font-size: 40px !important; line-height: 44px !important;} .text48{font-size: 48px !important; line-height: 48px !important;} .text-left{text-align: left !important;} .footer-link { font-size:10px !important; line-height: 13px
+      !important; } .social-icon { width: 48px !important; height: 28px !important; margin: 0 0px 20px 0 !important; }}
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-wrapper border="1px solid #eeeeee">
+      <mj-section>
+        <mj-column width="100%">
+          <mj-image padding="30px" width="220px" height="21px" href="#" src="./kad-logo.png" alt="Kitchenaid Logo" />
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column width="100%">
+          <mj-image src="./kad-email-hero.gif" alt="Yeti tote" />
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="pad-block-left-right" background-color="#ededed" padding-top="30px" padding-bottom="0px" padding-left="20px" padding-right="20px">
+        <mj-column>
+          <mj-text>
+            <p class="text-color text-center mtext18 text24 uppercase" style="margin-top: 0px; margin-bottom: 4px">Black Friday in&nbsp;July</p>
+          </mj-text>
+          <mj-image padding-bottom="20px" width="350px" src="./kad-email-hero-headline.png" alt="" />
+          <mj-text>
+            <p class="mtext16 text-color text-center" style="margin-top: 0px; margin-bottom: 20px">Let your creativity lead the way this summer with savings on select stand mixers and countertop appliances. Available now through July&nbsp;20.</p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section background-color="#ededed">
+        <mj-column css-class="pad-block-left-right" width="230px" padding-left="20px" padding-right="20px" padding-bottom="50px">
+          <mj-button href="#" mj-class="primary-button" width="100%"> Shop Now </mj-button>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="pad-block-left-right" background-color="#ffffff" padding-top="50px" padding-bottom="20px" padding-left="20px" padding-right="20px">
+        <mj-column>
+          <mj-text>
+            <h3 class="mtext20 text24 text-color bold uppercase text-center" style="margin-top: 0px; margin-bottom: 0px">SHOP SAVINGS ACROSS THE COUNTERTOP</h3>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="full-pad-block-left-right" background-color="#ffffff" padding-top="0px" padding-bottom="20px" padding-left="0px" padding-right="0px">
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-image fluid-on-mobile="true" src="./kad-email-product1.jpg" alt="Yeti tote" />
+        </mj-column>
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-text>
+            
+            <h3 class="mtext18 text-color bold text-center text-left padding-left20 padding-right20" style="margin-top: 0px; margin-bottom: 20px;"><span style="color: #c41230">$150 off</span> Semi Automatic Espresso Machine with Burr Grinder<sup>&#8225;&#8225;</sup></h3>
+            
+            <p class="mtext-center text-left text-color uppercase bold padding-left20" style="margin-top: 0px; margin-bottom: 20px; color: #c41230;"><a href="#" style="color: #c41230; text-decoration: none;">Shop now ❯</a></p>
+          </mj-text>
+          
+        </mj-column>
+      </mj-section>
+      <mj-section direction="rtl" css-class="full-pad-block-left-right" background-color="#ffffff" padding-top="0px" padding-bottom="20px" padding-left="0px" padding-right="0px">
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-image fluid-on-mobile="true" src="./kad-email-product2.jpg" alt="Yeti tote" />
+        </mj-column>
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-text>
+            
+            <h3 class="mtext18 text-color bold text-center text-left padding-left30 padding-right20" style="margin-top: 0px; margin-bottom: 20px;"><span style="color: #c41230">$200 off</span> Fully Automatic Espresso Machine KF7<sup>&#8225;&#8225;</sup></h3>
+            <p class="mtext-center text-left text-color uppercase bold padding-left30" style="margin-top: 0px; margin-bottom: 20px; color: #c41230;"><a href="#" style="color: #c41230; text-decoration: none;">Shop now ❯</a></p>
+          </mj-text>
+        </mj-column>
+        
+      </mj-section>
+      <mj-section css-class="full-pad-block-left-right" background-color="#ffffff" padding-top="0px" padding-bottom="20px" padding-left="0px" padding-right="0px">
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-image fluid-on-mobile="true" src="./kad-email-product3.jpg" alt="Yeti tote" />
+        </mj-column>
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-text>
+            
+            <h3 class="mtext18 text-color bold text-center text-left padding-left20 padding-right20" style="margin-top: 0px; margin-bottom: 20px;"><span style="color: #c41230">$130 off</span> KitchenAid<sup>&reg;</sup> 5.5 Quart Bowl&#8209;Lift Stand&nbsp;Mixers<sup>&#8225;&#8225;</h3>
+            
+            <p class="mtext-center text-left text-color uppercase bold padding-left20" style="margin-top: 0px; margin-bottom: 20px; color: #c41230;"><a href="#" style="color: #c41230; text-decoration: none;">Shop now ❯</a></p>
+          </mj-text>
+          
+        </mj-column>
+      </mj-section>
+      <mj-section direction="rtl" css-class="full-pad-block-left-right" background-color="#ffffff" padding-top="0px" padding-bottom="20px" padding-left="0px" padding-right="0px">
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-image fluid-on-mobile="true" src="./kad-email-product4.jpg" alt="Yeti tote" />
+        </mj-column>
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-text>
+            
+            <h3 class="mtext18 text-color bold text-center text-left padding-left30 padding-right20" style="margin-top: 0px; margin-bottom: 20px;">Up to <span style="color: #c41230">$100 off</span> Blenders<sup>&#8225;&#8225;</sup></h3>
+            <p class="mtext-center text-left text-color uppercase bold padding-left30" style="margin-top: 0px; margin-bottom: 20px; color: #c41230;"><a href="#" style="color: #c41230; text-decoration: none;">Shop now ❯</a></p>
+          </mj-text>
+        </mj-column>
+        
+      </mj-section>
+      <mj-section css-class="full-pad-block-left-right" background-color="#ffffff" padding-top="0px" padding-bottom="20px" padding-left="0px" padding-right="0px">
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-image fluid-on-mobile="true" src="./kad-email-product5.jpg" alt="Yeti tote" />
+        </mj-column>
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-text>
+            
+            <h3 class="mtext18 text-color bold text-center text-left padding-left20 padding-right20" style="margin-top: 0px; margin-bottom: 20px;"><span style="color: #c41230">$100 off</span> Artisan<sup>&reg;</sup> Series 5 Quart Tilt-Head Stand Mixer with Premium Touchpoints<sup>&#8225;&#8225;</sup></h3>
+            
+            <p class="mtext-center text-left text-color uppercase bold padding-left20" style="margin-top: 0px; margin-bottom: 20px; color: #c41230;"><a href="#" style="color: #c41230; text-decoration: none;">Shop now ❯</a></p>
+          </mj-text>
+          
+        </mj-column>
+      </mj-section>
+      <mj-section direction="rtl" css-class="full-pad-block-left-right" background-color="#ffffff" padding-top="0px" padding-bottom="20px" padding-left="0px" padding-right="0px">
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-image fluid-on-mobile="true" src="./kad-email-product6.jpg" alt="Yeti tote" />
+        </mj-column>
+        <mj-column vertical-align="middle" padding-bottom="20px">
+          <mj-text>
+            
+            <h3 class="mtext18 text-color bold text-center text-left padding-left30 padding-right20" style="margin-top: 0px; margin-bottom: 20px;">Up to <span style="color: #c41230">$80 off</span> Grain &amp; Rice Cooker<sup>&#8225;&#8225;</sup></h3>
+            <p class="mtext-center text-left text-color uppercase bold padding-left30" style="margin-top: 0px; margin-bottom: 0px; color: #c41230;"><a href="#" style="color: #c41230; text-decoration: none;">Shop now ❯</a></p>
+          </mj-text>
+        </mj-column>
+        
+      </mj-section>
+      <mj-section background-color="#ffffff">
+        <mj-column css-class="pad-block-left-right" width="280px" padding-left="20px" padding-right="20px" padding-bottom="50px">
+          <mj-button href="#" mj-class="primary-button" width="100%"> Shop All Sales </mj-button>
+        </mj-column>
+      </mj-section>
+      
+      <mj-section css-class="inset-pad-block-left-right" background-color="#ffffff" padding-top="0px" padding-bottom="20px" padding-left="0px" padding-right="0px">
+        <mj-column vertical-align="middle" padding-bottom="0px">
+          <mj-image fluid-on-mobile="true" src="./kad-email-inset1.png" alt="Yeti tote" />
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="pad-block-left-right" background-color="#ffffff" padding-top="0px" padding-bottom="0px" padding-left="20px" padding-right="20px">
+        <mj-column>
+          <mj-text>
+            <h3 class="mtext20 text24 text-color bold uppercase text-center" style="margin-top: 0px; margin-bottom: 10px">21 BEST SUMMER COCKTAILS</h3>
+            <p class="mtext16 text-color text-center" style="margin-top: 0px; margin-bottom: 20px">Keep cocktail prep simple by using the <a href="#" style="font-weight: bold; color: #c41230; text-decoration: none;">K400 Variable Speed Blender with Personal Blender Jar</a> to create smooth and creamy mixtures, then pull out your favorite glasses to cool off and toast to the season.</p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section background-color="#ffffff">
+        <mj-column css-class="pad-block-left-right" width="280px" padding-left="20px" padding-right="20px" padding-bottom="50px">
+          <mj-button href="#" mj-class="primary-button" width="100%"> Shop All Sales </mj-button>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="pad-block-left-right" background-color="#2e2e2e" padding-top="30px" padding-bottom="0px" padding-left="20px" padding-right="20px">
+        <mj-column>
+          <mj-text>
+            <p class="mtext16 white bold uppercase text-center" style="margin-top: 0px; margin-bottom: 20px"><a href="#" style="text-decoration: none; color: #ffffff;">Stand mixer</a></p>
+            <p class="mtext16 white bold uppercase text-center" style="margin-top: 0px; margin-bottom: 20px"><a href="#" style="text-decoration: none; color: #ffffff;">Major appliances</a></p>
+            <p class="mtext16 white bold uppercase text-center" style="margin-top: 0px; margin-bottom: 20px"><a href="#" style="text-decoration: none; color: #ffffff;">Countertop appliances</a></p>
+            <p class="mtext16 white bold uppercase text-center" style="margin-top: 0px; margin-bottom: 40px"><a href="#" style="text-decoration: none; color: #ffffff;">Sale</a></p>
+          </mj-text>
+          <mj-image padding-bottom="30px" width="198px" src="./kad-logo.png" alt="" />
+          
+          
+          <mj-text css-class="social-icons" padding-bottom="0px" align="center">
+            <a href="#" class="social-icon">
+              <img src="./kad-email-fb-icon.png" alt="Instagram" width="28" height="28" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="./kad-email-ig-icon.png" alt="Facebook" width="28" height="28" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="./kad-email-pi-icon.png" alt="Youtube" width="28" height="28" />
+            </a>
+            <a href="#" class="social-icon" style="margin-right: 0 !important;">
+              <img src="./kad-email-yt-icon.png" alt="Tiktok" width="28" height="28" />
+            </a>
+          </mj-text>
+        </mj-column>
+        
+      </mj-section>
+
+      <mj-section css-class="pad-block-left-right" background-color="#2e2e2e" padding-top="0px" padding-bottom="0px" padding-left="20px" padding-right="20px">
+        <mj-group width="200px">
+          <mj-column>
+            
+            <mj-text align="center">
+              <a href="#" class="footer-link">Contact Us</a>
+              <a href="#" class="footer-link">Privacy Notice</a>
+            </mj-text>
+          </mj-column>
+
+        </mj-group>
+        <mj-group width="200px">
+          
+          <mj-column>
+            <mj-text align="center">
+              <a href="#" class="footer-link">Terms of use</a>
+              <a href="#" class="footer-link">Unsubscribe</a>
+            </mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+      
+      <mj-section css-class="pad-block-left-right" background-color="#2e2e2e" padding-top="0px" padding-bottom="40px" padding-left="20px" padding-right="20px">
+      <mj-column>
+        <mj-text>
+            <p class="disclaimer-text" >‡‡Ends 7/20/2024 at 11:59 PM EST. Only valid for new orders on kitchenaid.com. Excludes closeout, commercial, and refurbished models. While supplies&nbsp;last.</p>
+            <p class="disclaimer-text">®/™ © 2024 KitchenAid. The design of the stand mixer is a trademark in the U.S. and elsewhere. All rights reserved. Whirlpool Corporation, 2000 N. M-63 Benton Harbor, MI 49022-2692</a></p>
+          </mj-text>
+      </mj-column>
+        
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

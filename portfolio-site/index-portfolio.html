@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -30,7 +35,7 @@
             <button id="menuToggle"><img id="menuIcon" src="./assets/menu.png" alt=""></button>
         </div>
 
-        
+
 
         <div id="mobileMenu">
             <nav>
@@ -50,10 +55,11 @@
     <section>
         <div class="hero-container">
             <div class="text-content">
-                <div class="subtitle">HELLO I'M</div>
-                <h1>Malik Hall</h1>
-                <p class="title">Shopify & Front-End Developer</p>
-                <p>I help brands convert with custom Shopify themes, landing pages, and high-performing HTML emails.</p>
+                <!-- <div class="subtitle">HELLO I'M Malik</div> -->
+                <h1>Malik Hall<br><span>Shopify & Front-End Developer</span></h1>
+                <!-- <p class="title">Shopify & Front-End Developer</p> -->
+                <p>I build Shopify themes, landing pages, and emails that help brands connect better, improve
+                    conversions, and create smoother experiences for customers and teams.</p>
                 <div class="links">
                     <a href="#">
                         <span class="button-icon"><img src="./assets/next-white.png" alt=""></span>
@@ -66,8 +72,11 @@
 
                 </div>
             </div>
-            <div class="image-context">
-                <img src="./assets/hero-placeholder.jpg" alt="">
+            <div class="two-by-two">
+                <div class="box box1"></div>
+                <div class="box box2"></div>
+                <div class="box box3"></div>
+                <div class="box box4"></div>
             </div>
         </div>
 
@@ -76,13 +85,13 @@
         const toggle = document.getElementById('menuToggle');
         const menu = document.getElementById('mobileMenu');
         const icon = document.getElementById('menuIcon');
-      
+
         toggle.addEventListener('click', () => {
-          const isOpen = menu.classList.toggle('show');
-          menu.setAttribute('aria-hidden', String(!isOpen));
-          icon.src = isOpen ? './assets/close.png' : './assets/menu.png';
+            const isOpen = menu.classList.toggle('show');
+            menu.setAttribute('aria-hidden', String(!isOpen));
+            icon.src = isOpen ? './assets/close.png' : './assets/menu.png';
         });
-      </script>
+    </script>
 </body>
 
 </html>

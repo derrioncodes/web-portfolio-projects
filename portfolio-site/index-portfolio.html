@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="brand">Malik Hall</div>
+            <div class="menu">
+                <nav>
+                    <a href="#">Skills</a>
+                    <a href="#">About</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Resume</a>
+                    <a id="contact" href="#">
+                        <span class="contact-icon"><img src="./assets/send.png" alt=""></span>
+                        <span>Let's Connect</span>
+                    </a>
+                </nav>
+            </div>
+            <button id="menuToggle"><img id="menuIcon" src="./assets/menu.png" alt=""></button>
+        </div>
+
+        
+
+        <div id="mobileMenu">
+            <nav>
+                <a href="#">Skills</a>
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <a href="#">Resume</a>
+                <a id="contact" href="#">
+                    <span class="contact-icon"><img src="./assets/send.png" alt=""></span>
+                    <span>Let's Connect</span>
+                </a>
+            </nav>
+        </div>
+
+    </header>
+
+    <section>
+        <div class="hero-container">
+            <div class="text-content">
+                <div class="subtitle">HELLO I'M</div>
+                <h1>Malik Hall</h1>
+                <p class="title">Shopify & Front-End Developer</p>
+                <p>I help brands convert with custom Shopify themes, landing pages, and high-performing HTML emails.</p>
+                <div class="links">
+                    <a href="#">
+                        <span class="button-icon"><img src="./assets/next-white.png" alt=""></span>
+                        <span class="button-text">See Projects</span>
+                    </a>
+                    <a href="#" class="secondary-button">
+                        <span class="button-icon"><img src="./assets/mail.png" alt=""></span>
+                        <span class="button-text">Email Me</span>
+                    </a>
+
+                </div>
+            </div>
+            <div class="image-context">
+                <img src="./assets/hero-placeholder.jpg" alt="">
+            </div>
+        </div>
+
+    </section>
+    <script>
+        const toggle = document.getElementById('menuToggle');
+        const menu = document.getElementById('mobileMenu');
+        const icon = document.getElementById('menuIcon');
+      
+        toggle.addEventListener('click', () => {
+          const isOpen = menu.classList.toggle('show');
+          menu.setAttribute('aria-hidden', String(!isOpen));
+          icon.src = isOpen ? './assets/close.png' : './assets/menu.png';
+        });
+      </script>
+</body>
+
+</html>

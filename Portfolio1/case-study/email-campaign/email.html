@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <title>Nexus Newsletter Case Study | James Jackson Portfolio</title>
+  <meta name="title" content="Nexus Newsletter Case Study | James Jackson Portfolio">
+  <meta name="description" content="Case study of cross-client email compatibility solution achieving 100% rendering across 40+ email clients including Outlook, Gmail, and Apple Mail.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="../../css/main.css">
+  
+  <!-- PostHog Analytics -->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    // Initialize PostHog - Replace 'YOUR_PROJECT_API_KEY' with your actual PostHog API key
+    posthog.init('YOUR_PROJECT_API_KEY', {
+      api_host: 'https://us.i.posthog.com', // Change to your PostHog instance URL if different
+      loaded: function(posthog) {
+        // Track initial page view
+        posthog.capture('$pageview', {
+          page_title: document.title,
+          page_url: window.location.href,
+          page_type: 'case_study',
+          case_study_name: 'Nexus Newsletter'
+        });
+      }
+    });
+  </script>
+  
+  <style>
+    :root { color-scheme: light; }
+    html, body { height: 100%; }
+    body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+  </style>
+</head>
+<body class="bg-white text-zinc-900 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/80 border-b border-zinc-200">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="flex items-center justify-between py-4">
+        <!-- Left: Logo + Desktop Nav -->
+        <div class="flex items-center gap-8">
+          <a href="../../index.html" class="inline-flex items-center gap-2">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 bg-white text-zinc-900 text-sm font-medium tracking-tight">JJ</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-700">
+            <a href="../../index.html#work" class="hover:text-zinc-900 transition">Explore</a>
+            <a href="../../index.html#projects" class="hover:text-zinc-900 transition">Portfolio</a>
+            <a href="../../index.html#about" class="hover:text-zinc-900 transition">My Story</a>
+            <a href="../../index.html#projects" class="hover:text-zinc-900 transition">Latest Work</a>
+            <a href="../../index.html#blog" class="hover:text-zinc-900 transition">Blog</a>
+          </nav>
+        </div>
+
+        <!-- Right: Email + CTA -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="mailto:hello@jamesjackson.com" class="text-xs font-medium text-zinc-600 tracking-tight hover:text-zinc-900 transition">HELLO@JAMESJACKSON.COM</a>
+          <a href="../../index.html#contact" class="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-white px-3.5 py-2 text-sm font-medium tracking-tight text-zinc-900 hover:bg-zinc-50 transition">
+            <i data-lucide="send" class="h-4 w-4"></i>
+            <span>Let's Connect</span>
+          </a>
+        </div>
+
+        <!-- Mobile Controls -->
+        <div class="md:hidden flex items-center gap-2">
+          <button id="mobileMenuBtn" aria-label="Open menu" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 bg-white text-zinc-900">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobileMenu" class="hidden border-t border-zinc-200 pb-4">
+        <nav class="flex flex-col gap-3 pt-4 text-sm font-medium text-zinc-700">
+          <a href="../../index.html#work" class="hover:text-zinc-900 transition">Explore</a>
+          <a href="../../index.html#projects" class="hover:text-zinc-900 transition">Portfolio</a>
+          <a href="../../index.html#about" class="hover:text-zinc-900 transition">My Story</a>
+          <a href="../../index.html#projects" class="hover:text-zinc-900 transition">Latest Work</a>
+          <a href="../../index.html#blog" class="hover:text-zinc-900 transition">Blog</a>
+          <a href="../../index.html#contact" class="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm font-medium tracking-tight text-zinc-900 hover:bg-zinc-50 transition w-max">
+            <i data-lucide="send" class="h-4 w-4"></i>
+            <span>Let's Connect</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Case Study Title -->
+    <section class="pt-16 pb-8 sm:py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="flex items-center gap-2 mb-6">
+          <span class="inline-flex rounded-full bg-zinc-100 text-zinc-700 text-xs font-medium px-2.5 py-1">Email Development</span>
+          <span class="inline-flex rounded-full bg-zinc-100 text-zinc-700 text-xs font-medium px-2.5 py-1">Responsive Design</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight">
+          Nexus Newsletter: Cross-Client Email Success
+        </h1>
+        <p class="mt-6 text-lg text-zinc-600 max-w-3xl">
+          A comprehensive email template library achieving 100% cross-client compatibility across 40+ email clients
+        </p>
+      </div>
+    </section>
+
+    <!-- Project Explanation & Highlights -->
+    <section class="pt-0 pb-16">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <!-- Left: Project Explanation -->
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight mb-6">Project Overview</h2>
+            <div class="space-y-4 text-zinc-600 leading-relaxed">
+              <p>
+                Developed a comprehensive email template library with 100% cross-client compatibility 
+                across 40+ email clients including Outlook, Gmail, Apple Mail, and Yahoo Mail. The 
+                solution utilized hybrid coding techniques and progressive enhancement to ensure 
+                pixel-perfect rendering across all major devices and email clients.
+              </p>
+              <p>
+                The challenge was maintaining visual consistency while accounting for the varying 
+                CSS support across different email clients. Many clients strip out or ignore modern 
+                CSS features, requiring fallback strategies and careful testing.
+              </p>
+              <p>
+                Templates were thoroughly tested using Litmus and Email on Acid, ensuring consistent 
+                appearance and functionality across desktop clients, webmail, and mobile devices. 
+                The modular template system we created reduced development time by 60% for future 
+                campaigns, establishing a reusable component library that could be quickly customized 
+                for different brand requirements.
+              </p>
+              <p>
+                Integration with multiple ESP platforms including Mailchimp, SendGrid, and Campaign 
+                Monitor ensured seamless deployment. The templates supported dynamic content 
+                insertion and personalization while maintaining design integrity.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Highlights -->
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight mb-6">Key Highlights</h2>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <h3 class="font-semibold text-zinc-900 mb-1">100% Client Compatibility</h3>
+                  <p class="text-sm text-zinc-600">Tested and verified across 40+ email clients including Outlook, Gmail, Apple Mail, and mobile clients</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <h3 class="font-semibold text-zinc-900 mb-1">60% Development Time Reduction</h3>
+                  <p class="text-sm text-zinc-600">Modular template system enabled rapid campaign deployment with reusable components</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <h3 class="font-semibold text-zinc-900 mb-1">Responsive Design</h3>
+                  <p class="text-sm text-zinc-600">Mobile-first approach ensuring optimal viewing experience on all device sizes</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <h3 class="font-semibold text-zinc-900 mb-1">Hybrid Coding Techniques</h3>
+                  <p class="text-sm text-zinc-600">Utilized table-based layouts with inline CSS for maximum compatibility</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <h3 class="font-semibold text-zinc-900 mb-1">Multi-ESP Support</h3>
+                  <p class="text-sm text-zinc-600">Compatible with Mailchimp, SendGrid, Campaign Monitor, and other major platforms</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <h3 class="font-semibold text-zinc-900 mb-1">A/B Testing Ready</h3>
+                  <p class="text-sm text-zinc-600">Built-in support for dynamic content and personalization variables</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Width YouTube Video -->
+    <section class="py-8">
+      <div class="w-full">
+        <div class="relative aspect-video w-full bg-zinc-100">
+          <iframe 
+            class="absolute inset-0 w-full h-full" 
+            src="https://www.youtube.com/embed/MqTKiYGtOjo" 
+            title="Nexus Newsletter Case Study Video" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section class="py-16 sm:py-24 bg-zinc-50">
+      <div class="mx-auto max-w-7xl px-6">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight mb-12">Project Screenshots</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Image 1 -->
+          <div class="relative overflow-hidden rounded-md border border-zinc-200 bg-white aspect-[4/3]">
+            <img 
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop" 
+              alt="Email template desktop view" 
+              class="w-full h-full object-cover transition duration-500 hover:scale-105"
+            >
+          </div>
+          <!-- Image 2 -->
+          <div class="relative overflow-hidden rounded-md border border-zinc-200 bg-white aspect-[4/3]">
+            <img 
+              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1600&auto=format&fit=crop" 
+              alt="Email template mobile view" 
+              class="w-full h-full object-cover transition duration-500 hover:scale-105"
+            >
+          </div>
+          <!-- Image 3 -->
+          <div class="relative overflow-hidden rounded-md border border-zinc-200 bg-white aspect-[4/3]">
+            <img 
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop" 
+              alt="Email template tablet view" 
+              class="w-full h-full object-cover transition duration-500 hover:scale-105"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Portfolio -->
+    <section class="py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="flex items-center justify-center">
+          <a href="../../index.html#case-studies" class="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-white px-6 py-3 text-sm font-medium tracking-tight text-zinc-900 hover:bg-zinc-50 transition">
+            <i data-lucide="arrow-left" class="h-4 w-4"></i>
+            <span>Back to Case Studies</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer / Contact -->
+  <footer id="contact" class="border-t border-zinc-200 bg-zinc-50">
+    <div class="mx-auto max-w-7xl px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div>
+          <div class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-zinc-300 bg-white text-zinc-900 text-sm font-medium tracking-tight">JJ</div>
+          <p class="mt-4 text-sm text-zinc-600 max-w-xs">Portfolio of James Jackson. Building elegant products with precision and care.</p>
+          <div class="mt-4 flex items-center gap-3">
+            <a href="#" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 bg-white text-zinc-700 hover:text-zinc-900">
+              <i data-lucide="github" class="h-5 w-5"></i>
+            </a>
+            <a href="#" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 bg-white text-zinc-700 hover:text-zinc-900">
+              <i data-lucide="linkedin" class="h-5 w-5"></i>
+            </a>
+            <a href="mailto:hello@jamesjackson.com" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-zinc-300 bg-white text-zinc-700 hover:text-zinc-900">
+              <i data-lucide="mail" class="h-5 w-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-base font-semibold tracking-tight">Links</h4>
+          <ul class="mt-4 space-y-2 text-sm text-zinc-600">
+            <li><a href="../../index.html#projects" class="hover:text-zinc-900">Projects</a></li>
+            <li><a href="../../index.html#about" class="hover:text-zinc-900">About</a></li>
+            <li><a href="../../index.html#skills" class="hover:text-zinc-900">Skills</a></li>
+            <li><a href="#" class="hover:text-zinc-900">Resume</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-base font-semibold tracking-tight">Get in touch</h4>
+          <p class="mt-4 text-sm text-zinc-600">Open to collaborations, speaking, and freelance engagements.</p>
+          <a href="mailto:hello@jamesjackson.com" class="mt-4 inline-flex items-center gap-2 rounded-md bg-zinc-900 px-4 py-2.5 text-white text-sm font-medium tracking-tight hover:bg-black transition">
+            <i data-lucide="send" class="h-4 w-4"></i>
+            <span>Email Hello@JamesJackson.com</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 flex items-center justify-between border-t border-zinc-200 pt-6 text-xs text-zinc-500">
+        <span>© <span id="year"></span> James Jackson</span>
+        <span>Crafted with intention.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    // Lucide icons
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', () => {
+      const open = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.innerHTML = open
+        ? '<i data-lucide="x" class="h-5 w-5"></i>'
+        : '<i data-lucide="menu" class="h-5 w-5"></i>';
+      lucide.createIcons();
+    });
+
+    // Close mobile menu on nav click
+    mobileMenu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          mobileBtn.innerHTML = '<i data-lucide="menu" class="h-5 w-5"></i>';
+          lucide.createIcons();
+        }
+      });
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /**
+     * Smooth scrolling for anchor links in header and footer
+     * Accounts for sticky header height to prevent content from being hidden
+     */
+    function smoothScrollToAnchor(e) {
+      // Only handle anchor links (links starting with #)
+      const href = e.currentTarget.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
+      
+      // For links to index.html with hash, navigate to index.html first
+      if (href.includes('index.html#')) {
+        return; // Let browser handle navigation
+      }
+      
+      // Get the target element
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (!targetElement) return;
+      
+      // Prevent default anchor behavior
+      e.preventDefault();
+      
+      // Get the sticky header height
+      const header = document.querySelector('header');
+      const headerHeight = header ? header.offsetHeight : 0;
+      
+      // Calculate the target position, accounting for header height
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      
+      // Smooth scroll to the calculated position
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+
+    // Apply smooth scrolling to all anchor links in header and footer
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('header a[href^="#"], footer a[href^="#"]').forEach(link => {
+        link.addEventListener('click', smoothScrollToAnchor);
+      });
+    });
+  </script>
+</body>
+</html>
+

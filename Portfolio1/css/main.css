@@ -1,0 +1,190 @@
+
+    :root { color-scheme: light; }
+    html { 
+      scroll-behavior: smooth; 
+    }
+    html, body { height: 100%; }
+    body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+
+    /**
+     * Fit-to-Width Text Technique
+     * Based on: https://kizu.dev/fit-to-width
+     * Uses registered custom properties, container queries, and math functions
+     * to make text fit the full width of its container
+     */
+    
+    /* Registered custom properties for the fit-to-width technique */
+    @property --captured-length {
+      syntax: "<length>";
+      initial-value: 0px;
+      inherits: true;
+    }
+
+    @property --captured-length2 {
+      syntax: "<length>";
+      initial-value: 0px;
+      inherits: true;
+    }
+
+    /* Main fit-to-width container */
+    .text-fit {
+      display: flex;
+      width: 100%;
+      container-type: inline-size;
+
+      /* Support sentinel: 9999px when custom property is not registered, 0px when it is */
+      --captured-length: initial;
+      --support-sentinel: var(--captured-length, 9999px);
+    }
+
+    /* Hide the duplicated text from screen readers and visually */
+    .text-fit > [aria-hidden] {
+      visibility: hidden;
+    }
+
+    /* The visible text container */
+    .text-fit > :not([aria-hidden]) {
+      flex-grow: 1;
+      container-type: inline-size;
+
+      /* Capture the container's inline size as a custom property */
+      --captured-length: 100cqi;
+      --available-space: var(--captured-length);
+    }
+
+    .text-fit > :not([aria-hidden]) > * {
+      --support-sentinel: inherit;
+      --captured-length: 100cqi;
+      
+      /* Calculate the ratio: available space / (available space - captured length)
+       * Using tan(atan2()) to calculate the scaling ratio
+       */
+      --ratio: tan(atan2(
+        var(--available-space),
+        var(--available-space) - var(--captured-length)
+      ));
+      
+      /* Calculate font size with min and max bounds */
+      --font-size: clamp(
+        1em,
+        1em * var(--ratio),
+        var(--max-font-size, infinity * 1px) - var(--support-sentinel)
+      );
+      
+      inline-size: var(--available-space);
+    }
+
+    /* Apply to non-nested text-fit elements */
+    .text-fit > :not([aria-hidden]) > *:not(.text-fit) {
+      display: block;
+      font-size: var(--font-size);
+
+      /* Prevent text wrapping when container has width */
+      @container (inline-size > 0) {
+        white-space: nowrap;
+      }
+    }
+
+    /* Handle nested text-fit for optical sizing support */
+    .text-fit > :not([aria-hidden]) > *.text-fit {
+      --captured-length2: var(--font-size);
+      font-variation-settings:
+        'opsz'
+        tan(atan2(var(--captured-length2), 1px));
+    }
+
+    /**
+     * Skill Icons Hover Colors
+     * Adds brand-specific colors to icons on hover
+     */
+    
+    /* HTML5 - Orange */
+    .skill-icon-html5:hover img {
+      filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3000%) hue-rotate(0deg) brightness(1.1);
+    }
+    
+    /* CSS - Blue */
+    .skill-icon-css:hover img {
+      filter: brightness(0) saturate(100%) invert(43%) sepia(93%) saturate(1000%) hue-rotate(200deg) brightness(1.1);
+    }
+    
+    /* JavaScript - Yellow */
+    .skill-icon-js:hover img {
+      filter: brightness(0) saturate(100%) invert(89%) sepia(100%) saturate(1000%) hue-rotate(0deg) brightness(1.1);
+    }
+    
+    /* Mailchimp - Orange/Yellow */
+    .skill-icon-mailchimp:hover img {
+      filter: brightness(0) saturate(100%) invert(67%) sepia(100%) saturate(1000%) hue-rotate(0deg) brightness(1.1);
+    }
+    
+    /* SendGrid - Blue */
+    .skill-icon-sendgrid:hover img {
+      filter: brightness(0) saturate(100%) invert(43%) sepia(93%) saturate(1000%) hue-rotate(200deg) brightness(1.1);
+    }
+    
+    /* HubSpot - Orange */
+    .skill-icon-hubspot:hover img {
+      filter: brightness(0) saturate(100%) invert(67%) sepia(100%) saturate(1000%) hue-rotate(350deg) brightness(1.1);
+    }
+    
+    /* Salesforce - Blue */
+    .skill-icon-salesforce:hover img {
+      filter: brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(1000%) hue-rotate(200deg) brightness(1.1);
+    }
+    
+    /* WordPress - Blue */
+    .skill-icon-wordpress:hover img {
+      filter: brightness(0) saturate(100%) invert(43%) sepia(93%) saturate(1000%) hue-rotate(200deg) brightness(1.1);
+    }
+    
+    /* Google Analytics - Orange/Red */
+    .skill-icon-analytics:hover img {
+      filter: brightness(0) saturate(100%) invert(47%) sepia(100%) saturate(1000%) hue-rotate(350deg) brightness(1.1);
+    }
+    
+    /* Mailgun - Red */
+    .skill-icon-mailgun:hover img {
+      filter: brightness(0) saturate(100%) invert(25%) sepia(100%) saturate(1000%) hue-rotate(350deg) brightness(1.1);
+    }
+    
+    /* General hover effect for skill icon containers */
+    .skill-icon {
+      transition: all 0.3s ease;
+    }
+    
+    .skill-icon:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .skill-icon img {
+      transition: filter 0.3s ease;
+    }
+
+    /**
+     * Exit Intent Modal
+     * Shows when user tries to leave the page
+     */
+    #exitModal.hidden {
+      display: none !important;
+    }
+
+    #exitModal:not(.hidden) {
+      display: flex !important;
+    }
+
+    #exitModal > div {
+      animation: modalFadeIn 0.3s ease-out;
+    }
+
+    @keyframes modalFadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }

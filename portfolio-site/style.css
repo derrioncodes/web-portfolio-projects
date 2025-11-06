@@ -154,9 +154,9 @@ a .button-icon {
 } */
 
 .section-container {
-    max-width: 1536px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 16px 24px;
+    padding: 30px;
 }
 
 header {
@@ -178,11 +178,11 @@ header {
 }
 
 header .container {
-    padding: 16px 24px;
+    padding: 16px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1536px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 

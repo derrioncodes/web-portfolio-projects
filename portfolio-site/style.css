@@ -135,12 +135,14 @@ h2 {
     font-weight: 400;
     line-height: 1.4;
     font-size: 32px;
-    margin-bottom: 24px;
+    margin-bottom: 0px;
 }
 
 p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.6;
+    opacity: 90%;
+    letter-spacing: .2px;
 }
 
 img {
@@ -436,9 +438,7 @@ nav a#contact:hover {
 
 /* Skills Section */
 
-.skills-section h2 {
-    margin-bottom: 0;
-}
+
 
 .skills-wrapper{
     display: grid;
@@ -472,6 +472,15 @@ nav a#contact:hover {
 }
 
 /* About Section */
+.about-section {
+    background-color: #f3f5f9;
+    
+}
+
+.about-section h2 {
+    margin-bottom: 32px;
+}
+
 .about-section .about-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -479,16 +488,11 @@ nav a#contact:hover {
     align-items: start;
 }
 
-.about-section .about-wrapper .about-image-content img{
+.about-section .main-container .about-image-content img{
     border-radius: 12px;
 }
 
-.about-text-content h2 {
-    font-weight: 400;
-    line-height: 1.4;
-    font-size: 32px;
-    margin-bottom: 24px;
-}
+
 
 @media (min-width: 640px) {
 
@@ -581,6 +585,10 @@ nav a#contact:hover {
         width: 80%;
     }
 
+    .about-section .main-container .about-image-content {
+        width: 80%;
+    }
+
     
 
 
@@ -615,5 +623,9 @@ nav a#contact:hover {
         grid-template-columns: repeat(3, 1fr);
         gap: 32px;
         width: 100%;
+    }
+
+    .about-section .main-container .about-image-content {
+        width: 40%;
     }
 }

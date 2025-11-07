@@ -357,7 +357,7 @@ nav a#contact:hover {
 
 .hero-container .text-content .links a:first-child {
 
-transition: gap ease-in-out .2s;
+    transition: gap ease-in-out .2s;
 }
 
 
@@ -380,7 +380,7 @@ transition: gap ease-in-out .2s;
     aspect-ratio: 1 / 1;
     border-radius: 12px;
     width: 100%;
-    
+
 }
 
 .box1 img {
@@ -428,8 +428,52 @@ transition: gap ease-in-out .2s;
     display: none;
 }
 
-.box4 img{
+.box4 img {
     border-radius: 12px;
+}
+
+/* Skills Section */
+.skills-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.skills-section h1 {
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 36px;
+    margin-bottom: 24px;
+}
+
+.skills-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.skills-section .skills-group .skills-title {
+    line-height: 1.4;
+    font-size: 18px;
+    font-weight: 300;
+    color: #5c6877;
+    opacity: 60%;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.skills-section .pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-section .pill-row .pill{
+    border: 1px solid rgb(212 212 216);
+    background: #fff;
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 999px;
 }
 
 @media (min-width: 640px) {
@@ -534,5 +578,11 @@ transition: gap ease-in-out .2s;
 
     .two-by-two {
         width: 50%;
+    }
+
+    .skills-wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
     }
 }

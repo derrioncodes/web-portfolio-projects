@@ -498,6 +498,7 @@ nav a#contact:hover {
     display: grid;
     gap: 32px;
     grid-template-columns: repeat(1,1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); */
 }
 
 .project-card{
@@ -507,31 +508,37 @@ nav a#contact:hover {
     display: flex;
     flex-direction: column;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+
+    overflow: hidden; /* keeps image + border radius clean */
+  transition: box-shadow .3s ease, transform .3s ease;
 }
 
 .project-card:hover{
     box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
     transform: translateY(-2px);
-    transition: .3s ease-in-out;
 }
 
 .project-card .project-image{
     display: block;
+    overflow: hidden;
     border-bottom: 1px solid rgb(212 212 216);
+
     
 }
 
 .project-card .project-image img{
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    display: block;
+    display: block;  
+    width: 100%;        
+    object-fit: cover; 
+
+    aspect-ratio: 16 / 9;
 }
 
 .project-card .project-body{
     padding: 24px;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    flex: 1;
 }
 
 .project-card .project-body h3{

@@ -188,7 +188,7 @@ header {
 }
 
 .secondary-button:hover {
-    background-color: rgb(212 212 216 / .2) !important;
+    background-color: #f3f5f9 !important;
 }
 
 header .container {
@@ -214,9 +214,6 @@ header .container .brand {
     letter-spacing: .2px;
 }
 
-header .container .menu nav a {
-
-}
 
 header .container button {
     width: 30px;
@@ -280,6 +277,7 @@ nav a#contact {
     display: flex;
     align-items: center;
     gap: 8px;
+    text-decoration: none;
 }
 
 nav a#contact .contact-icon {
@@ -288,7 +286,7 @@ nav a#contact .contact-icon {
 }
 
 nav a#contact:hover {
-    background-color: rgb(212 212 216 / .2);
+    background-color: #f3f5f9 !important;
 }
 
 #mobileMenu nav {

@@ -1,0 +1,117 @@
+.details-section .main-container {
+    align-items: start;
+}
+
+.details-section .main-container .text-content h2 {
+    margin-bottom: 20px;
+}
+
+.details-section .headline{
+    padding-top: 50px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+
+.details-section .headline .see-project-link{
+    margin-top: 24px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    background-color: #131d25;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+    width: fit-content;
+    gap: 8px;
+    flex: 1;
+    transition: gap ease-in-out .2s;
+
+}
+
+.details-section .headline .see-project-link:hover{
+    gap: 20px;
+}
+
+.details-section .headline .tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.details-section .headline .tags .tag{
+    border: 1px solid rgb(212 212 216);
+    background: rgba(212, 212, 216, 0.2);
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .5px;
+    border-radius: 999px;
+}
+
+.details-section .headline h1{
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+    margin-bottom: 24px;
+
+}
+
+.details-section .main-container .text-content .highlight {
+    display: inline-flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.details-section .main-container .text-content .highlight .icon{
+    height: 24px;
+    width: 24px;
+    padding-top: 4px;
+}
+
+.details-section .main-container .text-content .highlight .icon img{
+    height: 24px;
+    width: 24px;
+}
+
+
+.details-section .main-container .text-content .highlight .highlight-text-content{
+    padding-top: 0px;
+}
+
+
+.details-section .main-container .text-content .highlight p{
+    font-size: 16px;
+}
+
+.back-to-projects-container {
+    padding-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    max-width: 1280px;
+    margin: 0 auto 50px;
+}
+
+.back-to-projects{
+    margin-top: 24px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+    width: fit-content;
+    gap: 8px;
+    flex: 1;
+
+}
+

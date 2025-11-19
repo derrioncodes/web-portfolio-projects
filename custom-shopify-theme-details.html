@@ -23,9 +23,9 @@
             <div class="brand"><a href="/">Malik Hall</a></div>
             <div class="menu">
                 <nav>
-                    <a href="#skills-section">Skills</a>
-                    <a href="#about-section">About</a>
-                    <a href="#projects-section">Projects</a>
+                    <a href="/#skills-section">Skills</a>
+                    <a href="/#about-section">About</a>
+                    <a href="/#projects-section">Projects</a>
                     <a id="contact" href="mailto:malikhall247@gmail.com">
                         <span class="contact-icon"><img src="./assets/send.png" alt="mail icon"></span>
                         <span>Let's Connect</span>
@@ -70,7 +70,7 @@
                 site—dynamic content, filtering, search, email capture, and fully built templates. The goal was to show
                 how I can translate a real brand design into a customizable, merchant-friendly theme.</p>
 
-            <a class="see-project-link" href="https://papatui.myshopify.com/">
+            <a class="see-project-link" href="https://papatui.myshopify.com/" target="_blank">
                 <span class="button-icon"><img src="./assets/next-white.png" alt="arrow icon"></span>
                 <span class="button-text">View Project</span>
             </a>
@@ -177,7 +177,7 @@
         </div>
 
         <div class="back-to-projects-container">
-            <a class="back-to-projects secondary-button" href="#">
+            <a class="back-to-projects secondary-button" href="/#projects-section">
                 <span class="button-icon"><img src="./assets/back.png" alt="arrow icon"></span>
                 <span class="button-text">Back to Projects</span>
             </a>
@@ -200,59 +200,7 @@
         </div>
     </footer>
 
-
-    <script>
-        const toggle = document.getElementById('menuToggle');
-        const menu = document.getElementById('mobileMenu');
-        const icon = document.getElementById('menuIcon');
-        const menuLinks = document.querySelectorAll('#mobileMenu a');
-
-        toggle.addEventListener('click', () => {
-            const isOpen = menu.classList.toggle('show');
-            menu.setAttribute('aria-hidden', String(!isOpen));
-            icon.src = isOpen ? './assets/close.png' : './assets/menu.png';
-        });
-
-        // Close menu when clicking any link
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.remove('show');
-                menu.setAttribute('aria-hidden', "true");
-                icon.src = './assets/menu.png'; // back to hamburger icon
-            });
-        });
-    </script>
-    <!-- HEADER SCROLL -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const header = document.querySelector("header"); // or ".nav" if that's your header
-            const navLinks = document.querySelectorAll('a[href^="#"]');
-
-            navLinks.forEach(link => {
-                link.addEventListener("click", function (e) {
-                    const targetId = this.getAttribute("href");
-
-                    // Ignore links that are just "#"
-                    if (targetId.length === 1) return;
-
-                    const targetEl = document.querySelector(targetId);
-                    if (!targetEl) return;
-
-                    e.preventDefault();
-
-                    const headerHeight = header ? header.offsetHeight : 0;
-
-                    const elementTop = targetEl.getBoundingClientRect().top + window.scrollY;
-                    const offsetPosition = elementTop - headerHeight; // optional extra 8px spacing
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
-                });
-            });
-        });
-    </script>
+    <script src="app.js" defer></script>
 
 </body>
 

@@ -185,6 +185,7 @@ header {
     border: 1px solid rgb(212 212 216) !important;
     background-color: #ffffff !important;
     color: rgb(24 24 27) !important;
+    transition: background-color 0.25s ease;
 }
 
 .secondary-button:hover {
@@ -278,6 +279,7 @@ nav a#contact {
     align-items: center;
     gap: 8px;
     text-decoration: none;
+    transition: background-color 0.25s ease;
 }
 
 nav a#contact .contact-icon {
@@ -377,13 +379,13 @@ nav a#contact:hover {
 
 .main-container .text-content .links a:first-child {
 
-    transition: gap ease-in-out .2s;
+    transition: background-color 0.25s ease;
 }
 
 
 
 .main-container .text-content .links a:first-child:hover {
-    gap: 20px;
+    background-color: #2b3c49;
 }
 
 

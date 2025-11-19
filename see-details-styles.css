@@ -31,12 +31,12 @@
     width: fit-content;
     gap: 8px;
     flex: 1;
-    transition: gap ease-in-out .2s;
+    transition: background-color 0.25s ease;
 
 }
 
 .details-section .headline .see-project-link:hover{
-    gap: 20px;
+    background-color: #2b3c49;
 }
 
 .details-section .headline .tags{
@@ -113,5 +113,13 @@
     gap: 8px;
     flex: 1;
 
+}
+
+@media (min-width: 1024px){
+    .details-section .headline h1{
+        font-size: 44px;
+        line-height: 44px;
+    
+    }
 }
 

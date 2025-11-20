@@ -592,6 +592,7 @@ nav a#contact:hover {
     justify-content: space-between;
     gap: 12px;
     flex-wrap: wrap;
+    margin-top: auto;
 }
 
 .project-card .project-body .view-project-link{
@@ -602,7 +603,7 @@ nav a#contact:hover {
     gap: 6px;
     text-decoration: none;
     color: #131d25;
-    margin-top: auto;
+    
 
 }
 

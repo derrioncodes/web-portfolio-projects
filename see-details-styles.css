@@ -56,6 +56,23 @@
     border-radius: 999px;
 }
 
+.image-comparison-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.image-comparison-container .design .design-title{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.image-comparison-container .design.old-design .design-image{
+    border: 1px solid #131d25;
+}
+
 .details-section .headline h1{
     font-size: 36px;
     line-height: 44px;
@@ -120,6 +137,17 @@
         font-size: 44px;
         line-height: 44px;
     
+    }
+
+    .image-comparison-container {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .image-comparison-container .design {
+        width: 40%;
     }
 }
 

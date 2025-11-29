@@ -6,7 +6,7 @@
     margin-bottom: 20px;
 }
 
-.details-section .headline{
+.details-section .headline {
     padding-top: 50px;
     padding-bottom: 0px;
     padding-left: 30px;
@@ -17,7 +17,7 @@
 
 }
 
-.details-section .headline .see-project-link{
+.details-section .headline .see-project-link {
     margin-top: 24px;
     padding: 12px 16px;
     border-radius: 6px;
@@ -35,18 +35,18 @@
 
 }
 
-.details-section .headline .see-project-link:hover{
+.details-section .headline .see-project-link:hover {
     background-color: #2b3c49;
 }
 
-.details-section .headline .tags{
+.details-section .headline .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 24px;
 }
 
-.details-section .headline .tags .tag{
+.details-section .headline .tags .tag {
     border: 1px solid rgb(212 212 216);
     background: rgba(212, 212, 216, 0.2);
     padding: 8px 12px;
@@ -63,17 +63,17 @@
     gap: 32px;
 }
 
-.image-comparison-container .design .design-title{
+.image-comparison-container .design .design-title {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 20px;
 }
 
-.image-comparison-container .design.old-design .design-image{
+.image-comparison-container .design.old-design .design-image {
     border: 1px solid #131d25;
 }
 
-.details-section .headline h1{
+.details-section .headline h1 {
     font-size: 36px;
     line-height: 44px;
     font-weight: 600;
@@ -87,25 +87,93 @@
     margin-bottom: 12px;
 }
 
-.details-section .main-container .text-content .highlight .icon{
+.details-section .main-container .text-content .highlight .icon {
     height: 24px;
     width: 24px;
     padding-top: 4px;
 }
 
-.details-section .main-container .text-content .highlight .icon img{
+.details-section .main-container .text-content .highlight .icon img {
     height: 24px;
     width: 24px;
 }
 
 
-.details-section .main-container .text-content .highlight .highlight-text-content{
+.details-section .main-container .text-content .highlight .highlight-text-content {
     padding-top: 0px;
 }
 
 
-.details-section .main-container .text-content .highlight p{
+.details-section .main-container .text-content .highlight p {
     font-size: 16px;
+}
+
+.journey-map-container {
+    padding-top: 0px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.journey-map-container .design-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.journey-map-wrapper {
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid rgb(228 228 231);
+    background: #fafafa;
+
+}
+
+.journey-map-wrapper .journey-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.journey-map-wrapper .journey-steps .journey-step {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid rgb(228 228 231);
+    font-size: 14px;
+    gap: 8px;
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: .2px;
+    line-height: 18px;
+}
+
+.journey-map-wrapper .journey-steps .journey-step span {
+    font-weight: 600;
+    font-size: 14px;
+    color: #26A541;
+}
+
+.email-breakdown-container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.email-breakdown-container .design-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
 .back-to-projects-container {
@@ -117,7 +185,7 @@
     margin: 0 auto 50px;
 }
 
-.back-to-projects{
+.back-to-projects {
     margin-top: 24px;
     padding: 12px 16px;
     border-radius: 6px;
@@ -132,11 +200,123 @@
 
 }
 
-@media (min-width: 1024px){
-    .details-section .headline h1{
+/* Email Cards (Accordion) */
+.emails-list {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.email-card {
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.15s ease;
+}
+
+.email-card:hover {
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    transform: translateY(-2px);
+}
+
+.email-card-header {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    gap: 12px;
+    width: 100%;
+    border: none;
+}
+
+.email-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.email-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.email-summary {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+
+.email-toggle-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+    color: #6b7280;
+    transition: transform 0.2s ease, color 0.2s ease;
+    margin-left: auto;
+}
+
+.email-card.is-open {
+    border-color: #0f766e;
+    box-shadow: 0 10px 24px rgba(15, 118, 110, 0.15);
+}
+
+.email-card.is-open .email-toggle-icon {
+    transform: rotate(90deg);
+    color: #0f766e;
+}
+
+.email-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+    background: rgba(15, 118, 110, 0.02);
+}
+
+.email-card.is-open .email-body {
+    border-top: 1px solid #e5e7eb;
+}
+
+.email-body-inner {
+    padding: 0.9rem 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+.email-body-inner h4 {
+    margin: 0 0 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.email-body-inner p {
+    margin: 0 0 0.4rem;
+    color: #6b7280;
+}
+
+.email-body-inner ul {
+    margin: 0.1rem 0 0.6rem 1.1rem;
+    padding: 0;
+    color: #6b7280;
+    font-size: 0.9rem;
+    width: fit-content;
+}
+
+.email-body-inner li {
+    margin-bottom: 0.25rem;
+    list-style: disc;
+}
+
+@media (min-width: 1024px) {
+    .details-section .headline h1 {
         font-size: 44px;
         line-height: 44px;
-    
+
     }
 
     .image-comparison-container {
@@ -149,5 +329,8 @@
     .image-comparison-container .design {
         width: 40%;
     }
-}
 
+    .journey-map-wrapper .journey-steps .journey-step {
+        width: fit-content;
+    }
+}

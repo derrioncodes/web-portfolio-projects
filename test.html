@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Welcome Flow Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --border: rgb(228 228 231);
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --accent: #0f766e;
+      --accent-soft: rgba(15, 118, 110, 0.06);
+      --radius: 12px;
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --container: 980px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .cs-wrapper {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    .cs-eyebrow {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .cs-title {
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+    }
+
+    .cs-subtitle {
+      max-width: 60ch;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .cs-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .cs-pill {
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: #fff;
+    }
+
+    .cs-section-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    .cs-overview p {
+      margin: 0 0 1rem;
+      color: var(--text-muted);
+    }
+
+    /* Journey Map */
+    .journey-map {
+      margin-top: 1.5rem;
+      padding: 1.25rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: #fafafa;
+    }
+
+    .journey-steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .journey-step {
+      flex: 1 1 140px;
+      min-width: 0;
+      padding: 0.6rem 0.7rem;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px dashed var(--border);
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .journey-step span {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    /* Email Cards (Accordion) */
+    .emails-list {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .email-card {
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: #fff;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .email-card-header {
+      padding: 0.85rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      gap: 0.75rem;
+    }
+
+    .email-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .email-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .email-summary {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .email-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.15rem 0.4rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .email-toggle-icon {
+      font-size: 1.2rem;
+      line-height: 1;
+      color: var(--text-muted);
+      transition: transform 0.2s ease;
+    }
+
+    .email-card.is-open .email-toggle-icon {
+      transform: rotate(90deg);
+    }
+
+    .email-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease;
+      border-top: 1px solid var(--border);
+      background: var(--accent-soft);
+    }
+
+    .email-body-inner {
+      padding: 0.9rem 1rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .email-body-inner h4 {
+      margin: 0 0 0.35rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .email-body-inner p {
+      margin: 0 0 0.4rem;
+      color: var(--text-muted);
+    }
+
+    .email-body-inner ul {
+      margin: 0.1rem 0 0.6rem 1.1rem;
+      padding: 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .email-body-inner li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Featured Screens */
+    .featured-screens {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .featured-card {
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .featured-card h4 {
+      margin: 0;
+      padding: 0.8rem 1rem 0.4rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .featured-card p {
+      margin: 0 1rem 0.7rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .featured-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      max-height: 420px;
+    }
+
+    /* Highlights */
+    .cs-highlights {
+      margin-top: 2.5rem;
+      padding: 1.25rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: #fafafa;
+    }
+
+    .cs-highlights ul {
+      margin: 0.5rem 0 0;
+      padding-left: 1.1rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .cs-highlights li {
+      margin-bottom: 0.4rem;
+    }
+
+    .cs-highlights b {
+      color: var(--text-main);
+    }
+
+    @media (min-width: 768px) {
+      .featured-screens {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="cs-wrapper">
+    <!-- Top -->
+    <div class="cs-eyebrow">Case Study</div>
+    <h1 class="cs-title">YoungLA — 8-Email Welcome Flow</h1>
+    <p class="cs-subtitle">
+      An 8-part welcome flow designed for a performance and lifestyle brand. The goal is to introduce new subscribers to the brand, build trust, and guide them toward their first purchase in a way that feels personal and intentional.
+    </p>
+
+    <!-- Tools -->
+    <div class="cs-tools">
+      <span class="cs-pill">Figma</span>
+      <span class="cs-pill">Email Strategy</span>
+      <span class="cs-pill">Wireframing</span>
+      <span class="cs-pill">Lifecycle Marketing</span>
+      <span class="cs-pill">Copy Planning</span>
+    </div>
+
+    <!-- Overview -->
+    <section class="cs-overview">
+      <h2 class="cs-section-title">Project Overview</h2>
+      <p>
+        I approached this project as if YoungLA asked me to design a complete welcome journey for new subscribers. Instead of sending one generic introduction email, the flow is broken into eight purposeful steps that gradually introduce the brand, highlight key product categories, and build trust over time.
+      </p>
+      <p>
+        I started by defining the audience and their mindset when they first sign up—often coming from social content or a specific campaign. From there, I mapped out the journey in a simple flow: welcome & story, proof and trust, product education, social proof, and a time-bound offer to nudge the first purchase.
+      </p>
+      <p>
+        Once the structure was clear, I created low-fidelity wireframes for each email to establish hierarchy, content blocks, and the call to action. After that, I designed the full emails in Figma, keeping the layouts consistent with YoungLA’s visual style—bold imagery, strong typography, and clean sections that are easy to scan on mobile.
+      </p>
+      <p>
+        The result is a welcome sequence that feels intentional instead of repetitive. Each email has a specific purpose, clear message, and defined goal, while still working together as one story about who the brand is and why it matters to the subscriber.
+      </p>
+    </section>
+
+    <!-- Journey Map -->
+    <section>
+      <h2 class="cs-section-title">Welcome Journey Map</h2>
+      <div class="journey-map">
+        <div class="journey-steps">
+          <div class="journey-step">
+            <span>01</span> Welcome & Brand Story
+          </div>
+          <div class="journey-step">
+            <span>02</span> Social Proof & Community
+          </div>
+          <div class="journey-step">
+            <span>03</span> Product Highlights
+          </div>
+          <div class="journey-step">
+            <span>04</span> Fit, Sizing & FAQs
+          </div>
+          <div class="journey-step">
+            <span>05</span> Collections & Use Cases
+          </div>
+          <div class="journey-step">
+            <span>06</span> Creator / Athlete Spotlight
+          </div>
+          <div class="journey-step">
+            <span>07</span> Offer / First Purchase Nudge
+          </div>
+          <div class="journey-step">
+            <span>08</span> Post-Offer Check-in & Next Steps
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Email Breakdown (Accordion) -->
+    <section>
+      <h2 class="cs-section-title">Email-by-Email Breakdown</h2>
+      <p class="cs-subtitle" style="margin-top:0.25rem;">
+        Each email has a specific purpose, content focus, and primary goal. The sections below are expandable so the flow is easy to skim without feeling overwhelming.
+      </p>
+
+      <div class="emails-list">
+        <!-- Email 1 -->
+        <article class="email-card">
+          <button class="email-card-header" type="button">
+            <div class="email-meta">
+              <div class="email-title">Email 1 — Welcome & Brand Story</div>
+              <div class="email-summary">Warm welcome, what YoungLA stands for, what subscribers can expect.</div>
+            </div>
+            <div class="email-tag">Top of Funnel</div>
+            <div class="email-toggle-icon">›</div>
+          </button>
+          <div class="email-body">
+            <div class="email-body-inner">
+              <h4>Purpose</h4>
+              <p>Make a strong first impression, set expectations, and confirm that the subscriber is in the right place.</p>
+
+              <h4>Content Strategy</h4>
+              <ul>
+                <li>Short, personal welcome message that feels human, not corporate.</li>
+                <li>Quick explanation of what YoungLA is about (performance, lifestyle, community).</li>
+                <li>Preview of what subscribers will get: drops, early access, training content, etc.</li>
+              </ul>
+
+              <h4>Primary Goal</h4>
+              <p>Build trust and encourage subscribers to stay engaged with future emails.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Email 2 -->
+        <article class="email-card">
+          <button class="email-card-header" type="button">
+            <div class="email-meta">
+              <div class="email-title">Email 2 — Social Proof & Community</div>
+              <div class="email-summary">Show real people wearing the brand; lean into community and credibility.</div>
+            </div>
+            <div class="email-tag">Trust</div>
+            <div class="email-toggle-icon">›</div>
+          </button>
+          <div class="email-body">
+            <div class="email-body-inner">
+              <h4>Purpose</h4>
+              <p>Prove that the brand is trusted and loved by real customers and athletes.</p>
+
+              <h4>Content Strategy</h4>
+              <ul>
+                <li>Highlight UGC, athletes, and community photos.</li>
+                <li>Include short quotes or review snippets with clear takeaways.</li>
+                <li>Link to social channels for people who want to follow before buying.</li>
+              </ul>
+
+              <h4>Primary Goal</h4>
+              <p>Reduce hesitation by showing that others already wear and trust the brand.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Email 3 -->
+        <article class="email-card">
+          <button class="email-card-header" type="button">
+            <div class="email-meta">
+              <div class="email-title">Email 3 — Core Product Highlights</div>
+              <div class="email-summary">Introduce key product categories with simple, benefit-focused messaging.</div>
+            </div>
+            <div class="email-tag">Explore</div>
+            <div class="email-toggle-icon">›</div>
+          </button>
+          <div class="email-body">
+            <div class="email-body-inner">
+              <h4>Purpose</h4>
+              <p>Help new subscribers understand what to buy first and where to start.</p>
+
+              <h4>Content Strategy</h4>
+              <ul>
+                <li>Show 3–4 core categories (e.g., training, pumps, loungewear).</li>
+                <li>Pair each category with a simple “who it’s for / when to wear it” line.</li>
+                <li>Use CTAs that drive to curated collections, not just the homepage.</li>
+              </ul>
+
+              <h4>Primary Goal</h4>
+              <p>Move subscribers from curiosity into browsing specific products.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Email 4 -->
+        <article class="email-card">
+          <button class="email-card-header" type="button">
+            <div class="email-meta">
+              <div class="email-title">Email 4 — Fit, Sizing & FAQs</div>
+              <div class="email-summary">Answer common questions before they become objections.</div>
+            </div>
+            <div class="email-tag">Education</div>
+            <div class="email-toggle-icon">›</div>
+          </button>
+          <div class="email-body">
+            <div class="email-body-inner">
+              <h4>Purpose</h4>
+              <p>Remove friction by addressing sizing, returns, and shipping expectations.</p>
+
+              <h4>Content Strategy</h4>
+              <ul>
+                <li>Visual sizing guidance and notes on how key pieces fit.</li>
+                <li>Short FAQ block: shipping times, returns, restocks.</li>
+                <li>Optional link to a more detailed help/FAQ page.</li>
+              </ul>
+
+              <h4>Primary Goal</h4>
+              <p>Increase confidence that buying once will lead to a good experience.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Email 5 -->
+        <article class="email-card">
+          <button class="email-card-header" type="button">
+            <div class="email-meta">
+              <div class="email-title">Email 5 — Collections & Use Cases</div>
+              <div class="email-summary">Match products to real-life scenarios: training, errands, travel, etc.</div>
+            </div>
+            <div class="email-tag">Inspire</div>
+            <div class="email-toggle-icon">›</div>
+          </button>
+          <div class="email-body">
+            <div class="email-body-inner">
+              <h4>Purpose</h4>
+              <p>Show how the brand fits into everyday life and different training styles.</p>
+
+              <h4>Content Strategy</h4>
+              <ul>
+                <li>Curated looks for “leg day,” “rest day,” “travel day,” etc.</li>
+                <li>Use imagery that feels aspirational but still achievable.</li>
+                <li>Feature links to full outfits or collections, not just single products.</li>
+              </ul>
+
+              <h4>Primary Goal</h4>
+              <p>Help subscribers see themselves wearing the brand in their own routines.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Email 6 -->
+        <article class="email-card">
+          <button class="email-card-header" type="button">
+            <div class="email-meta">
+              <div class="email-title">Email 6 — Creator / Athlete Spotlight</div>
+              <div class="email-summary">Tell a story through someone the audience already trusts or relates to.</div>
+            </div>
+            <div class="email-tag">Story</div>
+            <div class="email-toggle-icon">›</div>
+          </button>
+          <div class="email-body">
+            <div class="email-body-inner">
+              <h4>Purpose</h4>
+              <p>Humanize the brand and connect with people who follow athletes or creators.</p>
+
+              <h4>Content Strategy</h4>
+              <ul>
+                <li>Short profile or Q&A style layout with a sponsored athlete or creator.</li>
+                <li>Highlight their favorite pieces and why they like them.</li>
+                <li>Soft CTA to shop their look or follow them on social.</li>
+              </ul>
+
+              <h4>Primary Goal</h4>
+              <p>Strengthen emotional connection and reinforce brand identity.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Email 7 -->
+        <article class="email-card">
+          <button class="email-card-header" type="button">
+            <div class="email-meta">
+              <div class="email-title">Email 7 — First Purchase Offer</div>
+              <div class="email-summary">Introduce a limited-time offer that rewards early action.</div>
+            </div>
+            <div class="email-tag">Convert</div>
+            <div class="email-toggle-icon">›</div>
+          </button>
+          <div class="email-body">
+            <div class="email-body-inner">
+              <h4>Purpose</h4>
+              <p>Give subscribers a clear reason to place their first order now, not “someday.”</p>
+
+              <h4>Content Strategy</h4>
+              <ul>
+                <li>Simple, time-bound incentive (e.g., % off, free shipping, or bonus item).</li>
+                <li>Reminder of what makes the brand different and worth trying.</li>
+                <li>Clear, singular CTA that drives to a broad but curated collection.</li>
+              </ul>
+
+              <h4>Primary Goal</h4>
+              <p>Turn an engaged subscriber into a first-time customer.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Email 8 -->
+        <article class="email-card">
+          <button class="email-card-header" type="button">
+            <div class="email-meta">
+              <div class="email-title">Email 8 — Check-In & Next Steps</div>
+              <div class="email-summary">Close the loop on the sequence and set expectations going forward.</div>
+            </div>
+            <div class="email-tag">Retention</div>
+            <div class="email-toggle-icon">›</div>
+          </button>
+          <div class="email-body">
+            <div class="email-body-inner">
+              <h4>Purpose</h4>
+              <p>Wrap up the welcome journey and guide subscribers into the “normal” content rhythm.</p>
+
+              <h4>Content Strategy</h4>
+              <ul>
+                <li>Thank them for being here and recap what they’ve seen so far.</li>
+                <li>Offer a gentle reminder of the brand’s main value props.</li>
+                <li>Let them know what type of emails they’ll receive next (drops, launches, content).</li>
+              </ul>
+
+              <h4>Primary Goal</h4>
+              <p>Transition the subscriber into ongoing campaigns without feeling abrupt.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Featured Screens -->
+    <section>
+      <h2 class="cs-section-title">Featured Email Screens</h2>
+      <div class="featured-screens">
+        <div class="featured-card">
+          <h4>Email 1 — Welcome & Brand Story</h4>
+          <p>A clean layout focused on the core promise, what to expect, and a single clear CTA.</p>
+          <img src="https://via.placeholder.com/600x1200?text=Email+1+Mockup" alt="Email 1 mockup placeholder">
+        </div>
+        <div class="featured-card">
+          <h4>Email 3 — Product Highlights</h4>
+          <p>Category-based layout that helps new subscribers figure out where to start.</p>
+          <img src="https://via.placeholder.com/600x1200?text=Email+3+Mockup" alt="Email 3 mockup placeholder">
+        </div>
+        <div class="featured-card">
+          <h4>Email 7 — First Purchase Offer</h4>
+          <p>Focused on a simple, time-sensitive offer with minimal distractions.</p>
+          <img src="https://via.placeholder.com/600x1200?text=Email+7+Mockup" alt="Email 7 mockup placeholder">
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="cs-highlights">
+      <h2 class="cs-section-title" style="margin-top:0;">Key Highlights</h2>
+      <ul>
+        <li>Designed an <b>8-email welcome flow</b> tailored to a performance and lifestyle brand.</li>
+        <li>Started with <b>audience research, wireframes, and a journey map</b> before design.</li>
+        <li>Built all emails in <b>Figma</b> with consistent hierarchy, layouts, and mobile-first thinking.</li>
+        <li>Defined the <b>purpose, content, and primary goal</b> of each email in the sequence.</li>
+        <li>Structured the flow to move subscribers from <b>awareness → trust → exploration → first purchase</b>.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    // Simple accordion behavior for email cards
+    const emailCards = document.querySelectorAll('.email-card');
+
+    emailCards.forEach(card => {
+      const header = card.querySelector('.email-card-header');
+      const body = card.querySelector('.email-body');
+
+      header.addEventListener('click', () => {
+        const isOpen = card.classList.contains('is-open');
+
+        // Close all others (optional; comment out this loop if you want multiple open)
+        emailCards.forEach(c => {
+          c.classList.remove('is-open');
+          const b = c.querySelector('.email-body');
+          if (b) b.style.maxHeight = null;
+        });
+
+        // Toggle current
+        if (!isOpen) {
+          card.classList.add('is-open');
+          body.style.maxHeight = body.scrollHeight + 'px';
+        } else {
+          card.classList.remove('is-open');
+          body.style.maxHeight = null;
+        }
+      });
+    });
+
+    // On load, you can optionally open the first card:
+    // if (emailCards[0]) {
+    //   const firstBody = emailCards[0].querySelector('.email-body');
+    //   emailCards[0].classList.add('is-open');
+    //   firstBody.style.maxHeight = firstBody.scrollHeight + 'px';
+    // }
+  </script>
+</body>
+</html>

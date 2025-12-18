@@ -618,6 +618,14 @@ nav a#contact:hover {
 
 }
 
+.project-badge {
+    font-size: 14px;
+    padding: 4px 8px;
+    background: #f3f5f9;
+    border-radius: 6px;
+}
+  
+
 /* FOOTER SECTION */
 footer {
     border-top: 1px solid rgb(228 228 231);

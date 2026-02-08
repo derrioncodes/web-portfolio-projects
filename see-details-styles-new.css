@@ -133,16 +133,10 @@
 
 
 
-.image-comparison-section {
-    padding-bottom: 0px;
-    padding-left: 30px;
-    padding-right: 30px;
-    max-width: 1280px;
-    margin: 0 auto 50px;
-}
+
 
 .image-comparison-container {
-    
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -518,7 +512,6 @@
 .email-body-inner li {
     margin-bottom: 8px;
     list-style: disc;
-    line-height: 1.6;
 }
 
 
@@ -684,6 +677,7 @@
     }
 
     .image-comparison-container {
+        margin-top: 40px;
         display: flex;
         flex-direction: row;
         gap: 32px;

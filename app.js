@@ -77,3 +77,69 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
+
+// PROJECT DETAILS CAROUSEL
+
+document.querySelectorAll('.image-carousel-container').forEach(carousel => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = carousel.querySelector('.carousel-btn.next');
+    const prevButton = carousel.querySelector('.carousel-btn.prev');
+
+    let currentIndex = 0;
+
+     // Safety check
+  if (!track || slides.length <= 1) {
+    // Hide buttons if only one (or zero) slides
+    if (nextButton) nextButton.style.display = 'none';
+    if (prevButton) prevButton.style.display = 'none';
+    return;
+  }
+
+    function updateSlidePosition() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function moveToNextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlidePosition();
+    }
+
+    function moveToPrevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlidePosition();
+    }
+
+    nextButton.addEventListener('click', moveToNextSlide);
+    prevButton.addEventListener('click', moveToPrevSlide);
+});
+
+
+// PROJECT DETAILS READMORE/SHOW LESS
+
+
+document.querySelectorAll('.toggle-full-details-content').forEach(button => {
+    button.addEventListener('click', () => {
+        const section = button.closest('.full-details-project-section');
+        const content = section.querySelector('.full-details-content');
+        const label = button.querySelector('.toggle-label'); // optional
+
+        const isExpanded = section.classList.toggle('is-expanded');
+        button.setAttribute('aria-expanded', String(isExpanded));
+
+        // Update label text (if you're using a span)
+        if (label) label.textContent = isExpanded ? 'Show less' : 'Read more';
+
+        // Dynamic max-height
+        if (isExpanded) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+            content.style.maxHeight = '0px';
+        }
+    });
+});
+
+
+
+

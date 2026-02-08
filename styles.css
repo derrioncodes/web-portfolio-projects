@@ -602,8 +602,10 @@ nav a#contact:hover {
     line-height: 20px;
     gap: 6px;
     text-decoration: none;
-    color: #131d25;
-    
+    color: #fff;
+    background-color: #131d25;
+    padding: 8px 12px;
+    border-radius: 6px;
 
 }
 

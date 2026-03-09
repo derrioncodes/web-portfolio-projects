@@ -205,6 +205,18 @@
     margin-bottom: 20px;
 }
 
+.details-section .full-details-project-section .calendar-img {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1024px;
+}
+
+.details-section .full-details-project-section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
 
 
 

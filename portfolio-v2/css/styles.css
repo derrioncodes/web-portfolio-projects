@@ -164,8 +164,8 @@ table {
     --text-xs-line: 18px;
 
     /* Small */
-    --text-sm-size: 14px;
-    --text-sm-line: 20px;
+    --text-sm-size: 15px;
+    --text-sm-line: 24px;
 
     /* Base */
     --text-base-size: 16px;
@@ -184,12 +184,12 @@ table {
     --text-xl-line: 34px;
 
     /* Section Heading */
-    --heading-section-size: 32px;
-    --heading-section-line: 40px;
+    --heading-section-size: 28px;
+    --heading-section-line: 36px;
 
     /* Hero Heading */
-    --heading-hero-size: 48px;
-    --heading-hero-line: 56px;
+    --heading-hero-size: 32px;
+    --heading-hero-line: 40px;
 
     /* FONT WEIGHTS */
     --weight-regular: 400;
@@ -230,12 +230,63 @@ a {
     padding-bottom: 60px;
 }
 
+/* FONT SIZE UTILITY */
+.text-xs {
+    font-size: var(--text-xs-size);
+    line-height: var(--text-xs-line);
+}
+
+.text-sm {
+    font-size: var(--text-sm-size);
+    line-height: var(--text-sm-line);
+}
+
+.text-base {
+    font-size: var(--text-base-size);
+    line-height: var(--text-base-line);
+}
+
+.text-md {
+    font-size: var(--text-md-size);
+    line-height: var(--text-md-line);
+}
+
+.text-lg {
+    font-size: var(--text-lg-size);
+    line-height: var(--text-lg-line);
+}
+
+.text-xl {
+    font-size: var(--text-xl-size);
+    line-height: var(--text-xl-line);
+}
+
+.hero-heading {
+    font-size: var(--heading-hero-size);
+    line-height: var(--heading-hero-line);
+}
+
+.section-heading {
+    font-size: var(--heading-section-size);
+    line-height: var(--heading-section-line);
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --heading-hero-size: 48px;
+        --heading-hero-line: 56px;
+
+        --heading-section-size: 32px;
+        --heading-section-line: 40px;
+    }
+}
+
 .container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .button-primary {
@@ -263,6 +314,10 @@ a {
     border-radius: 8px;
 }
 
+.showOn1024 {
+    display: none;
+}
+
 
 header {
     position: sticky;
@@ -274,11 +329,11 @@ header {
 }
 
 header .header-container {
-    padding: 16px 24px;
+    padding: 16px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1280px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -391,8 +446,6 @@ nav a#contact:hover {
 }
 
 .hero-text-content .overline {
-    font-size: var(--text-xs-size);
-    line-height: var(--text-xs-line);
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -401,10 +454,13 @@ nav a#contact:hover {
 
 }
 
+.hero-text-content {
+    width: 100%;
+    max-width: 688px;
+}
+
 .hero-text-content h1 {
-    font-size: var(--heading-section-size);
     font-family: var(--font-accent);
-    line-height: var(--heading-section-line);
     font-weight: var(--weight-semibold);
     letter-spacing: -0.5px;
     margin-bottom: var(--space-24);
@@ -415,8 +471,6 @@ nav a#contact:hover {
 }
 
 .hero-text-content .hero-intro {
-    font-size: var(--text-base-size);
-    line-height: var(--text-base-line);
     color: var(--text-body);
     margin-bottom: var(--space-24);
 }
@@ -426,6 +480,7 @@ nav a#contact:hover {
     flex-direction: column;
     gap: 28px;
     margin-bottom: var(--space-24);
+
 }
 
 .hero-text-content .card-wrapper .experience-card .card-icon {
@@ -438,21 +493,16 @@ nav a#contact:hover {
     height: 86px;
     flex-shrink: 0;
     margin-bottom: var(--space-24);
-    
+
 }
 
 .hero-text-content .card-wrapper .experience-card .card-text-content h3 {
-    font-size: var(--text-lg-size);
-    line-height: var(--text-lg-line);
     font-weight: var(--weight-semibold);
     margin-bottom: var(--space-12);
     color: var(--navy-900);
 }
 
 .hero-text-content .card-wrapper .experience-card .card-text-content p {
-    font-size: 15px;
-    line-height: 24px;
-    
     color: var(--text-body);
 }
 
@@ -469,8 +519,6 @@ nav a#contact:hover {
     padding: 6px 10px;
     margin-right: 8px;
     margin-bottom: 8px;
-    font-size: 12px;
-    line-height: 16px;
     font-weight: 500;
     color: #0F172A;
     width: fit-content;
@@ -480,17 +528,62 @@ nav a#contact:hover {
     width: fit-content;
 }
 
-.hero-grid .hero-image{
+.hero-grid .hero-image {
     width: 100%;
     max-width: 500px;
     border-radius: 16px;
 }
 
-.hero-grid .hero-image img{
+.hero-grid .hero-image img {
     border-radius: 16px;
 }
 
+/* HOW I HELP */
 
+.how-i-help-section .container h2 {
+    text-align: center;
+    color: var(--navy-900);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-40);
+}
+
+.how-i-help-section .container .how-i-help-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.how-i-help-section .container .how-i-help-wrapper .how-i-help-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.06);
+
+    display: flex;
+
+    gap: 28px;
+    flex-direction: column;
+}
+
+.how-i-help-section .container .how-i-help-wrapper .how-i-help-card .icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+}
+
+
+.how-i-help-section .container .how-i-help-wrapper .how-i-help-card .how-i-help-text-content h3 {
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-12);
+    color: var(--navy-900);
+
+    /* max-width: 280px; */
+}
+
+.how-i-help-section .container .how-i-help-wrapper .how-i-help-card .how-i-help-text-content p {
+    color: var(--text-body);
+}
 
 @media (min-width: 640px) {
     .hero-text-content .card-wrapper {
@@ -498,18 +591,19 @@ nav a#contact:hover {
         flex-direction: row;
     }
 
-    .hero-text-content .card-wrapper .experience-card{
+    .hero-text-content .card-wrapper .experience-card {
         display: flex;
         gap: 28px;
     }
 
-    .hero-text-content .card-wrapper .experience-card .card-icon{
+    .hero-text-content .card-wrapper .experience-card .card-icon {
         margin-bottom: 0;
     }
 
-    .hero-text-content .card-wrapper .experience-card .card-text-content{
+    .hero-text-content .card-wrapper .experience-card .card-text-content {
         width: 200px;
     }
+
     .hero-text-content .card-wrapper .experience-card:first-child {
         padding-right: 28px;
         border-right: 1px solid #475569;
@@ -517,8 +611,24 @@ nav a#contact:hover {
 }
 
 @media (min-width: 768px) {
+
+    
+
+    header .header-container {
+        padding: 16px 24px;
+    }
+
     header #menuToggle {
         display: none;
+    }
+
+    header .header-container {
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1400px;
+        margin: 0 auto;
     }
 
     nav {
@@ -528,8 +638,8 @@ nav a#contact:hover {
     }
 
     .container {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .section {
@@ -547,13 +657,15 @@ nav a#contact:hover {
 }
 
 @media (min-width: 1024px) {
-    
+    .showOn1024 {
+        display: block;
+    }
 
-    .hero-grid .hero-image{
+    .hero-grid .hero-image {
         width: 100%;
     }
 
-    .hero-grid .hero-image img{
+    .hero-grid .hero-image img {
         object-fit: cover;
     }
 
@@ -568,7 +680,16 @@ nav a#contact:hover {
         line-height: 56px;
     }
 
-    
+    .how-i-help-section .container .how-i-help-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .how-i-help-section .container .how-i-help-wrapper .how-i-help-card {
+
+        flex-direction: row;
+    }
+
+
     footer .header-container {
         width: 100%;
     }

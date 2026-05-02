@@ -1,0 +1,76 @@
+/* FONTS */
+    --font-primary: "Inter", sans-serif;
+    --font-accent: "Playfair Display", serif;
+
+    /* COLORS */
+    --navy-900: #0F172A;
+    --navy-700: #1E3A8A;
+    --blue-600: #2563EB;
+
+    --bg-main: #F8FAFC;
+    --bg-soft: #F1F5F9;
+    --white: #FFFFFF;
+
+    --border: #E2E8F0;
+
+    --text-main: #0F172A;
+    --text-body: #475569;
+    --text-muted: #94A3B8;
+
+    /* FONT SIZES */
+    /* Extra Small */
+    --text-xs-size: 12px;
+    --text-xs-line: 18px;
+
+    /* Small */
+    --text-sm-size: 14px;
+    --text-sm-line: 20px;
+
+    /* Base */
+    --text-base-size: 16px;
+    --text-base-line: 26px;
+
+    /* Medium */
+    --text-md-size: 18px;
+    --text-md-line: 28px;
+
+    /* Large */
+    --text-lg-size: 20px;
+    --text-lg-line: 30px;
+
+    /* XL */
+    --text-xl-size: 24px;
+    --text-xl-line: 34px;
+
+    /* Section Heading */
+    --heading-section-size: 32px;
+    --heading-section-line: 40px;
+
+    /* Hero Heading */
+    --heading-hero-size: 48px;
+    --heading-hero-line: 56px;
+
+    /* FONT WEIGHTS */
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* SPACING */
+    --space-4: 4px;
+    --space-8: 8px;
+    --space-12: 12px;
+    --space-16: 16px;
+    --space-20: 20px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --space-40: 40px;
+    --space-48: 48px;
+    --space-64: 64px;
+    --space-80: 80px;
+    --space-100: 100px;
+
+
+
+Notes: 
+

@@ -73,4 +73,6 @@
 
 
 Notes: 
+Create single details page for wordpress site
 
+for "How i help" section instead of paragraph text put pills instead so its easier to skim

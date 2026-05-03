@@ -648,6 +648,14 @@ nav a#contact:hover {
     margin-bottom: var(--space-12);
 }
 
+.projects-section .container .projects-wrapper .project-card .project-badge {
+    font-size: 14px;
+    padding: 4px 8px;
+    background: var(--bg-soft);
+    border-radius: 6px;
+    color: #0F172A;
+}
+
 .projects-section .container .projects-wrapper .project-card .project-card-text-content .project-pills{
     margin-bottom: 28px;
     display: flex;
@@ -674,7 +682,37 @@ nav a#contact:hover {
     color: #1E3A8A;
     font-weight: var(--weight-medium);
     margin-top: auto;
+    width: fit-content;
 
+}
+footer {
+    background-color: var(--navy-900);
+    opacity: 95%;
+}
+
+footer .container.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    color: #ffffff;
+}
+
+footer .container.footer .brand{
+    font-weight: var(--weight-semibold);
+}
+
+.linkedin-social-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.linkedin-social-container .icon {
+    width: 20px;
+    height: 20px;
 }
 
 @media (min-width: 640px) {
@@ -743,10 +781,12 @@ nav a#contact:hover {
         grid-template-columns: repeat(2, 1fr);  
     }
 
-
-    footer .header-container {
-        width: 74%;
+    footer .container.footer{
+        display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        gap: 24px;
+        color: #ffffff;
     }
 
 
@@ -789,10 +829,6 @@ nav a#contact:hover {
         grid-template-columns: repeat(3, 1fr);  
     }
 
-
-    footer .header-container {
-        width: 100%;
-    }
 }
 
 @media (min-width: 1280px) {

@@ -38,3 +38,21 @@ make videos explaining case studies (can be after publish)
                         </div>
                     </div>
                 </div> -->
+
+
+
+                <!-- <div class="project-card">
+                    <div class="project-image">
+                        <img src="../assets/yeti-cover-img.avif" alt="">
+                    </div>
+                    <div class="project-card-text-content">
+                        <h3 class="text-md">Email Redesign</h3>
+                        <p>Redesigned a YETI marketing email for better clarity, hierarchy, and mobile performance, then rebuilt it using MJML for reliable cross-client rendering.</p>
+                        <div class="project-pills">
+                            <div class="pill text-xs">Email Design</div>
+                        </div>
+                    </div>
+                    <div class="project-link">
+                        <a href="#">View Case Study </a>
+                    </div>
+                </div> -->

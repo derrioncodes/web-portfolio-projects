@@ -349,6 +349,7 @@ header .header-container .brand {
     font-size: 20px;
     font-weight: 800;
     letter-spacing: .2px;
+    color: #0F172A;
 }
 
 
@@ -390,6 +391,7 @@ nav {
     padding-top: 16px;
     display: none;
     gap: 16px;
+    color: #0F172A;
 }
 
 nav a {
@@ -398,7 +400,7 @@ nav a {
     font-size: 16px;
     line-height: 20px;
     text-decoration: none;
-    color: rgb(63 63 70);
+    color: #0F172A;
     cursor: pointer;
 }
 
@@ -407,7 +409,7 @@ nav a:hover {
 }
 
 nav a#contact {
-    border: 1px solid rgb(212 212 216);
+    border: 1px solid #E2E8F0;
     width: fit-content;
     border-radius: 6px;
     padding: 8px 12px;
@@ -424,7 +426,7 @@ nav a#contact .contact-icon {
 }
 
 nav a#contact:hover {
-    background-color: #f3f5f9 !important;
+    background-color: #F1F5F9 !important;
 }
 
 #mobileMenu nav {
@@ -583,6 +585,23 @@ nav a#contact:hover {
 
 .how-i-help-section .container .how-i-help-wrapper .how-i-help-card .how-i-help-text-content p {
     color: var(--text-body);
+    margin-bottom: var(--space-16);
+}
+
+.how-i-help-section .container .how-i-help-wrapper .how-i-help-card .how-i-help-text-content .project-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+}
+
+.how-i-help-section .container .how-i-help-wrapper .how-i-help-card .how-i-help-text-content .project-pills .pill {
+    background-color: var(--bg-soft);
+    padding: 6px 10px;
+    width: fit-content;
+    border-radius: 999px;
+    font-weight: var(--weight-medium);
+    color: var(--font-primary);
 }
 
 /* PROJECT SECTION */
@@ -635,17 +654,17 @@ nav a#contact:hover {
 
 
 
-.projects-section .container .projects-wrapper .project-card .project-card-text-content h3{
+.projects-section .container .projects-wrapper .project-card .project-card-text-content h3 {
     font-weight: var(--weight-semibold);
     color: var(--navy-900);
     margin-bottom: var(--space-8);
 }
 
-.projects-section .container .projects-wrapper .project-card .project-card-text-content p{
+.projects-section .container .projects-wrapper .project-card .project-card-text-content p {
     font-size: 14px;
     line-height: 22px;
     color: var(--text-body);
-    margin-bottom: var(--space-12);
+    margin-bottom: var(--space-24);
 }
 
 .projects-section .container .projects-wrapper .project-card .project-badge {
@@ -656,41 +675,50 @@ nav a#contact:hover {
     color: #0F172A;
 }
 
-.projects-section .container .projects-wrapper .project-card .project-card-text-content .project-pills{
-    margin-bottom: 28px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-
-}
-
-.projects-section .container .projects-wrapper .project-card .project-card-text-content .project-pills .pill{
-    background-color: var(--bg-soft);
-    padding: 4px 8px;
-    width: fit-content;
-    border-radius: 999px;
-    font-weight: var(--weight-medium);
-    color: var(--font-primary);
-}
-
 .projects-section .container .projects-wrapper .project-card .project-link {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
+    margin-top: auto;
+}
+
+.projects-section .container .projects-wrapper .project-card .project-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
     font-size: 14px;
     line-height: 22px;
     color: #1E3A8A;
     font-weight: var(--weight-medium);
-    margin-top: auto;
+
     width: fit-content;
 
+    text-decoration: none;
+
+    transition: color 0.2s ease, transform 0.2s ease;
+
 }
+
+.projects-section .container .projects-wrapper .project-card .project-link a .arrow {
+    transition: transform 0.2s ease;
+}
+
+/* Hover */
+.projects-section .container .projects-wrapper .project-card .project-link a:hover {
+    color: #0F172A;
+}
+
+.projects-section .container .projects-wrapper .project-card .project-link a:hover .arrow {
+    transform: translateX(4px);
+}
+
 footer {
     background-color: var(--navy-900);
     opacity: 95%;
 }
 
-footer .container.footer{
+footer .container.footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -698,7 +726,7 @@ footer .container.footer{
     color: #ffffff;
 }
 
-footer .container.footer .brand{
+footer .container.footer .brand {
     font-weight: var(--weight-semibold);
 }
 
@@ -778,10 +806,10 @@ footer .container.footer .brand{
     }
 
     .projects-section .container .projects-wrapper {
-        grid-template-columns: repeat(2, 1fr);  
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    footer .container.footer{
+    footer .container.footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -820,13 +848,10 @@ footer .container.footer .brand{
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .how-i-help-section .container .how-i-help-wrapper .how-i-help-card {
 
-        flex-direction: row;
-    }
 
     .projects-section .container .projects-wrapper {
-        grid-template-columns: repeat(3, 1fr);  
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
@@ -837,5 +862,10 @@ footer .container.footer .brand{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .how-i-help-section .container .how-i-help-wrapper .how-i-help-card {
+
+        flex-direction: row;
     }
 }

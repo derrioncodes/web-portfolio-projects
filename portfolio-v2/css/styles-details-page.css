@@ -1,0 +1,180 @@
+.details.section.hero-section .container .hero-grid .hero-text-content {
+    max-width: 640px;
+}
+
+.details.section.hero-section .container .hero-grid .hero-image {
+    max-width: 100%;
+}
+
+.flex-btns {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.project-preview-section {
+    padding-top: 20px !important;
+}
+
+.project-preview-section .container h2 {
+    text-align: center;
+    color: var(--navy-900);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-40);
+}
+
+.project-preview-section .container .project-preview-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+}
+
+.project-preview-section .container .project-preview-wrapper .project-preview-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+    padding: 24px 24px 0px;
+    aspect-ratio: 1/1;
+}
+
+.project-preview-section .container .project-preview-wrapper .project-preview-card img {
+    display: block;
+    object-fit: cover;
+    object-position: top;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.left-right-border {
+    border-left: 1px solid #E2E8F0;
+    border-right: 1px solid #E2E8F0;
+}
+
+.project-details-section {
+    background-color: #F1F5F9;
+}
+
+.project-details-section .container .details-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 40px 32px;
+    border-radius: 16px;
+}
+
+.project-details-section .container .details-wrapper .overline {
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1E3A8A;
+    margin-bottom: 12px;
+}
+
+.project-details-section .container .details-wrapper h3 {
+    font-family: var(--font-accent);
+    font-weight: var(--weight-bold);
+    letter-spacing: -0.5px;
+    margin-bottom: var(--space-24);
+}
+
+.project-details-section .container .details-wrapper .subtext {
+    color: var(--text-body);
+    margin-bottom: var(--space-40);
+}
+
+.project-details-section .container .details-wrapper .single-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #E2E8F0;
+    margin-bottom: 32px;
+}
+
+.project-details-section .container .details-wrapper .single-detail.no-border {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0px;
+}
+
+.project-details-section .container .details-wrapper .single-detail .icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+}
+
+.project-details-section .container .details-wrapper .single-detail .details-text-content h4 {
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-12);
+}
+
+
+
+.project-details-section .container .details-wrapper .single-detail .details-text-content p {
+    color: var(--text-body);
+}
+
+.project-details-section .container .details-wrapper .single-detail .details-text-content ul {
+    color: var(--text-body);
+    list-style-type:disc;
+    margin-left: 16px;
+}
+
+.project-details-section .container .details-wrapper .single-detail .details-text-content ul li{
+    margin-bottom: 4px;
+}
+
+.project-details-section .container .details-wrapper .single-detail .details-text-content ul li:last-child{
+    margin-bottom: 0px !important;
+}
+
+.project-details-section .container .details-wrapper .single-detail .details-text-content ul li::marker{
+    
+    color: #1E3A8A;
+}
+
+.project-details-section .container .back-to-projects {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.project-details-section .container .back-to-projects a{
+    width: fit-content;
+}
+
+@media (min-width: 640px) {
+    .project-details-section .container .details-wrapper .single-detail {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    .details.section.hero-section .container .hero-grid {
+        align-items: center;
+    }
+
+    .details.how-i-help-section .container .how-i-help-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-preview-section .container .project-preview-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .details.how-i-help-section .container .how-i-help-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .details.how-i-help-section .container .how-i-help-wrapper .how-i-help-card {
+        flex-direction: column;
+    }
+
+    .project-preview-section .container .project-preview-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

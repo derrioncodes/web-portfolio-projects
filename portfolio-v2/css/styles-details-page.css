@@ -39,12 +39,24 @@
     aspect-ratio: 1/1;
 }
 
+.project-preview-section .container .project-preview-wrapper.landing-page-wrapper .project-preview-card {
+    aspect-ratio: inherit;
+}
+
+.project-preview-section .container .project-preview-wrapper.landing-page-wrapper.full-padding .project-preview-card {
+    padding: 24px 24px 24px;
+}
+
 .project-preview-section .container .project-preview-wrapper .project-preview-card img {
     display: block;
     object-fit: cover;
     object-position: top;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+}
+
+.project-preview-section .container .project-preview-wrapper.landing-page-wrapper .project-preview-card img{
+    object-position: center;
 }
 
 .left-right-border {
@@ -176,5 +188,9 @@
 
     .project-preview-section .container .project-preview-wrapper {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .project-preview-section .container .project-preview-wrapper.landing-page-wrapper {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

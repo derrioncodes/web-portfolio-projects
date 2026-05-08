@@ -4,15 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- FONTS -->
+    <!-- Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
+
+    <!-- Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+
+
     <title>Portfolio</title>
 
     <!-- Google tag (gtag.js) -->
@@ -38,21 +49,21 @@
 </head>
 
 <body>
+
     <header>
-        <div class="container">
+        <div class="header-container">
             <div class="brand"><a href="/">Malik Hall</a></div>
             <div class="menu">
                 <nav>
                     <a href="#skills-section">Skills</a>
-                    <a href="#about-section">About</a>
                     <a href="#projects-section">Projects</a>
-                    <a id="contact" href="mailto:malikhall247@gmail.com">
-                        <span class="contact-icon"><img src="./assets/send.png" alt="mail icon"></span>
-                        <span>Let's Connect</span>
+                    <a id="contact" href="https://www.linkedin.com/in/malikhall247/" target="_blank">
+                        <span class="contact-icon"><img src="../assets/linkedin.png" alt="LinkedIn icon"></span>
+                        <span>LinkedIn</span>
                     </a>
                 </nav>
             </div>
-            <button id="menuToggle"><img id="menuIcon" src="./assets/menu.png" alt="mobile menu"></button>
+            <button id="menuToggle"><img id="menuIcon" src="../assets/menu.png" alt="mobile menu"></button>
         </div>
 
 
@@ -60,325 +71,244 @@
         <div id="mobileMenu">
             <nav>
                 <a href="#skills-section">Skills</a>
-                <a href="#about-section">About</a>
                 <a href="#projects-section">Projects</a>
-                <a id="contact" href="mailto:malikhall247@gmail.com">
-                    <span class="contact-icon"><img src="./assets/send.png" alt="mail icon"></span>
-                    <span>Let's Connect</span>
+                <a id="contact" href="https://www.linkedin.com/in/malikhall247/" target="_blank">
+                    <span class="contact-icon"><img src="../assets/linkedin.png" alt="LinkedIn icon"></span>
+                    <span>LinkedIn</span>
                 </a>
             </nav>
         </div>
 
     </header>
 
-    <section class="hero-section">
-        <div class="main-container section-wrapper">
-            <div class="text-content">
-                <div class="subtitle">HELLO I'M Malik</div> 
-                <h1 class="name">Malik Hall</h1>
-                <h1><span>Email Professional</span></h1>
-                <p class="title">3+ years email production experience • 1,500+ campaigns deployed</p>
-                <p>With a background in HTML email development, campaign QA, and marketing platforms, I help teams build and launch email campaigns while supporting promotional sends, automated lifecycle programs, and customer journeys.
-                </p>
-                <div class="links">
-                    <a href="#projects-section">
-                        <span class="button-icon"><img src="./assets/next-white.png" alt="arrow icon"></span>
-                        <span class="button-text">See Projects</span>
-                    </a>
-                    <a href="mailto:malikhall247@gmail.com" class="secondary-button">
-                        <span class="button-icon"><img src="./assets/mail.png" alt="mail icon"></span>
-                        <span class="button-text">Email Me</span>
-                    </a>
+    <section class="section hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text-content">
+                    <p class="overline text-xs">EMAIL DEVELOPER & <br>MARTECH SPECIALIST</p>
+                    <h1 class="hero-heading">I build, automate, and support <span>lifecycle marketing</span> systems
+                        across email and web.
+                    </h1>
+                    <p class="hero-intro text-base">Combining email development, lifecycle marketing, and frontend
+                        skills,
+                        I help teams launch campaigns, build automation, and support the web
+                        experiences that drive conversions.</p>
+                    <div class="card-wrapper">
+                        <div class="experience-card">
+                            <div class="card-icon">
+                                <img src="../assets/email-icon-v2.png" alt="">
+                            </div>
+                            <div class="card-text-content">
+                                <h3 class="text-lg">3+ Years Experience</h3>
+                                <p class="text-sm">Email & Web Production Experience</p>
+                            </div>
+                        </div>
 
-                </div>
-            </div>
-            <div class="two-by-two">
-                <div class="box box1">
-                    <img src="./assets/malikportfolio-hero.jpeg" alt="Malik Hall's headshot">
-                </div>
-                <div class="box box2">
-                    <div class="box-icon">
-                        <img src="./assets/email-campaign-icon.png" alt="target icon">
+                        <div class="experience-card">
+                            <div class="card-icon">
+                                <img src="../assets/paper-plane-icon.png" alt="">
+                            </div>
+                            <div class="card-text-content">
+                                <h3 class="text-lg">1,500+</h3>
+                                <p class="text-sm">Campaigns Deployed</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="box-text">Email Campaign<br>Execution</div>
 
-                </div>
-                <div class="box box3">
-                    <div class="box-icon">
-                        <img src="./assets/automation.png" alt="plug icon">
+                    <div class="skill-pills-wrapper">
+                        <div class="pill text-xs">Email</div>
+                        <div class="pill text-xs">Lifecycle Automation</div>
+                        <div class="pill text-xs">Frontend</div>
+                        <div class="pill text-xs">Martech Platforms</div>
                     </div>
-                    <div class="box-text">Lifecycle Email<br>Automation</div>
+
+                    <a href="#projects-section" class="hero-btn button-primary">View Projects</a>
                 </div>
-                <div class="box box4">
-                    <img src="./assets/hero-image-square-2_v3.jpeg" alt="laptop and phone">
+                <div class="hero-image">
+                    <img src="../assets/malikportfolio-about-us.jpeg" alt="">
                 </div>
             </div>
         </div>
-
-    </section> 
-
-
-    
-    <section id="skills-section" class="skills-section">
-        <div class="main-container section-wrapper">
-            <div class="text-content">
-                <h2>Skills</h2>
-            </div>
-
-            <div class="skills-wrapper">
-                <div class="skills-group">
-                    <div class="skills-title">Lifecycle & Marketing Automation</div>
-                    <div class="pill-row">
-                        <span class="pill">Lifecycle Email Programs</span>
-                        <span class="pill">Automated Customer Journeys</span>
-                        <span class="pill">Promotional Campaigns</span>
-                        <span class="pill">Segmentation</span>
-                        <span class="pill">A/B Testing</span>
-                        <span class="pill">Campaign QA</span>
-                    </div>
-                </div>
-                <div class="skills-group">
-                    <div class="skills-title">Email Campaign Development</div>
-                    <div class="pill-row">
-                        <span class="pill">HTML Email Development</span>
-                        <span class="pill">Responsive Email Design</span>
-                        <span class="pill">Cross-Client QA</span>
-                        <span class="pill">Accessibility</span>
-                        <span class="pill">Email Template Systems</span>
-                        <span class="pill">Campaign Deployment</span>
-                    </div>
-                </div>
-                <div class="skills-group">
-                    <div class="skills-title">Email & Marketing Platforms</div>
-                    <div class="pill-row">
-                        <span class="pill">Klaviyo</span>
-                        <span class="pill">Marketo</span>
-                        <span class="pill">Braze</span>
-                        <span class="pill">ConvertKit</span>
-                        <span class="pill">Shopify</span>
-                        <span class="pill">Google Analytics 4</span>
-                        <span class="pill">Hotjar</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
     </section>
 
-    <section id="about-section" class="about-section">
-        <div class="main-container section-wrapper">
-            <div class="text-content">
-                <h2>About</h2>
-                <p style="margin-bottom: 20px;">
-                    I started my career as an Email Developer, spending three years building responsive, cross-client emails in production environments using HTML and CSS. That experience strengthened my technical foundation, attention to detail, and QA discipline while exposing me to the scale and complexity of high-volume marketing campaigns.
-                </p>
+    <section id="skills-section" class="section how-i-help-section">
+        <div class="container">
+            <h2 class="section-heading">Here's how I help marketing teams move&nbsp;faster</h2>
+            <div class="how-i-help-wrapper">
+                <div class="how-i-help-card">
+                    <div class="icon">
+                        <img src="../assets/skill-card-icon-1.png" alt="">
+                    </div>
+                    <div class="how-i-help-text-content">
+                        <h3 class="text-lg">Email & Campaign <br class="showOn1024">Development</h3>
+                        <p class="text-sm">I build responsive campaign emails that are clean, accessible, and ready for
+                            QA across clients.</p>
+                        <div class="project-pills">
+                            <div class="pill text-xs">HTML</div>
+                            <div class="pill text-xs">CSS</div>
+                            <div class="pill text-xs">JavaScript</div>
+                            <div class="pill text-xs">Responsive Email</div>
+                            <div class="pill text-xs">Accessibility</div>
+                            <div class="pill text-xs">QA</div>
+                        </div>
+                    </div>
+                </div>
 
-                <p style="margin-bottom: 20px;">
-                    Over time, I became more interested in the strategy behind those campaigns — how lifecycle emails, promotional sends, and customer journeys work together to support marketing goals. I began expanding my knowledge of lifecycle marketing, automation, and ecommerce systems while continuing to develop my technical skills across platforms like Klaviyo, Marketo, Shopify, and WordPress.
-                </p>
+                <div class="how-i-help-card">
+                    <div class="icon">
+                        <img src="../assets/skill-card-icon-2.png" alt="">
+                    </div>
+                    <div class="how-i-help-text-content">
+                        <h3 class="text-lg">Lifecycle Automation <br class="showOn1024">& Journeys</h3>
+                        <p class="text-sm">I create automated journeys and audience segments that support lifecycle
+                            marketing and conversions.</p>
+                        <div class="project-pills">
+                            <div class="pill text-xs">Segmentation</div>
+                            <div class="pill text-xs">Automation</div>
+                            <div class="pill text-xs">Flows</div>
+                            <div class="pill text-xs">A/B Testing</div>
+                        </div>
+                    </div>
+                </div>
 
-                <p>
-                    Today I focus on supporting marketing teams by combining technical email development with campaign execution and lifecycle automation. I enjoy working at the intersection of marketing and technology, helping teams launch reliable campaigns, maintain scalable email systems, and create email experiences customers actually want to receive.
-                </p>
+                <div class="how-i-help-card">
+                    <div class="icon">
+                        <img src="../assets/skill-card-icon-3.png" alt="">
+                    </div>
+                    <div class="how-i-help-text-content">
+                        <h3 class="text-lg">Marketing Systems <br class="showOn1024">& Web&nbsp;Support</h3>
+                        <p class="text-sm">I connect email, web, and AI tools to help marketing teams move faster and work smarter.</p>
+                        <div class="project-pills">
+                            <div class="pill text-xs">Shopify</div>
+                            <div class="pill text-xs">WordPress</div>
+                            <div class="pill text-xs">Klaviyo</div>
+                            <div class="pill text-xs">Marketo</div>
+                            <div class="pill text-xs">ChatGPT</div>
+                            <div class="pill text-xs">Perplexity</div>
+                        </div>
 
+                    </div>
+                </div>
             </div>
-
-            <div class="about-image-content">
-                <img src="./assets/malikportfolio-about-us.jpeg" alt="malik hall's headshot">
-            </div>
-
         </div>
-
     </section>
 
-    <section id="projects-section" class="projects-section">
-        <div class="main-container section-wrapper">
-            <div class="text-content">
-                <h2>Projects</h2>
-            </div>
+    <section id="projects-section" class="section projects-section">
+        <div class="container">
+            <h2 class="section-heading">Featured projects</h2>
             <div class="projects-wrapper">
                 <div class="project-card">
-                    <a href="./welcome-flow-details.html" target="_blank" class="project-image"><img src="./assets/youngla-cover-img.jpg"
-                            alt="YoungLA's team"></a>
-                    <div class="project-body">
-                        <h3>Welcome Flow + Popup</h3>
-                        <p>Designed a complete welcome flow experience, including a targeted pop-up and an 8-email
+                    <div class="project-image">
+                        <img src="../assets/youngla-cover-img.jpg" alt="">
+                    </div>
+                    <div class="project-card-text-content">
+                        <h3 class="text-md">Welcome Flow + Popup</h3>
+                        <p>Designed a complete welcome flow experience, including a targeted pop-up and an 5-email
                             sequence, focused on introducing the brand, building trust, and driving first-time
                             conversions.</p>
-                        <div class="tags">
-                            <span class="tag">Email Design</span>
-                            <span class="tag">Customer Journey</span>
-                            <span class="tag">Figma</span>
-                            <span class="tag">Email Marketing</span>
-                            <span class="tag">Copywriting</span>
-
-                        </div>
-                        <div class="project-links">
-                            
-                            <a class="view-project-link" href="./welcome-flow-details.html">
-                                <span class="link-icon"><img src="./assets/see-white.png" alt="open page icon"></span>
-                                <span class="link-text">See Details</span>
-
-                            </a>
-                        </div>
+                    </div>
+                    <div class="project-link">
+                        <a href="./welcome-flow.html">View Case Study <span class="arrow">--></span></a>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <a href="./abandon-cart-details.html" target="_blank" class="project-image"><img src="./assets/Abandon-cart-cover-image-01-lg.jpeg"
-                            alt="YoungLA's team"></a>
-                    <div class="project-body">
-                        <h3>Abandoned Cart Recovery Flow</h3>
-                        <p>Designed a complete abandoned cart recovery flow with a segmented sequence: 7 emails for new shoppers and 5 for returning customers, reminding of items and encouraging checkout.</p>
-                        <div class="tags">
-                            <span class="tag">Lifecycle Automation</span>
-                            <span class="tag">Customer Journey</span>
-                            <span class="tag">Conversion Strategy</span>
-                            <span class="tag">Figma</span>
-                            
-
-                        </div>
-                        <div class="project-links">
-                            
-                            <a class="view-project-link" href="./abandon-cart-details.html">
-                                <span class="link-icon"><img src="./assets/see-white.png" alt="open page icon"></span>
-                                <span class="link-text">See Details</span>
-
-                            </a>
-                        </div>
+                    <div class="project-image">
+                        <img src="../assets/Abandon-cart-cover-image-01-lg.jpeg" alt="">
+                    </div>
+                    <div class="project-card-text-content">
+                        <h3 class="text-md">Abandoned Cart Recovery Flow</h3>
+                        <p>Designed a complete abandoned cart recovery flow with a segmented sequence: 7 emails for new
+                            shoppers and 5 for returning customers, reminding of items and encouraging checkout.</p>
+                        
+                    </div>
+                    <div class="project-link">
+                        <a href="./abandon-cart-flow.html">View Case Study <span class="arrow">--></span></a>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <a href="./campaign-calendar-details.html" target="_blank" class="project-image"><img
-                            src="./assets/wilde-brands_project-cover-image.jpg" alt="Wordpress site"></a>
-                    <div class="project-body">
-                        <h3>Campaign Calendar</h3>
-                        <p>Planned a full August campaign calendar for Wilde, mapping weekly email campaigns around seasonal events, product highlights, and value-driven content to engage subscribers and support brand growth.</p>
-                        <div class="tags">
-                            <span class="tag">Email Marketing</span>
-                            <span class="tag">Campaign Planning</span>
-                            <span class="tag">Content Strategy</span>
-
-                        </div>
-                        <div class="project-links">
-                            
-                            <a class="view-project-link" href="./campaign-calendar-details.html">
-                                <span class="link-icon"><img src="./assets/see-white.png" alt="open page icon"></span>
-                                <span class="link-text">See Details</span>
-
-                            </a>
-                        </div>
+                    <div class="project-image">
+                        <img src="../assets/wilde-brands_project-cover-image.jpg" alt="">
+                    </div>
+                    <div class="project-card-text-content">
+                        <h3 class="text-md">Campaign Calendar</h3>
+                        <p class="">Planned a full August campaign calendar for Wilde, mapping weekly email campaigns
+                            around seasonal events, product highlights, and value-driven content to engage subscribers
+                            and support brand growth.</p>
+                        
+                    </div>
+                    <div class="project-link">
+                        <a href="./calendar.html">View Case Study <span class="arrow">--></span></a>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <a href="./email-project1/index.html" target="_blank" class="project-image"><img
-                            src="./assets/yeti-cover-img.avif" alt="Yeti products"></a>
-                    <div class="project-body">
-                        <h3>Email Redesign</h3>
-                        <p>Redesigned a YETI marketing email for better clarity, hierarchy, and mobile performance, then
-                            rebuilt it using MJML for reliable cross-client rendering.</p>
-                        <div class="tags">
-                            <span class="tag">MJML</span>
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">Figma</span>
-                            <span class="tag">EmailOnAcid</span>
-
-                        </div>
-                        <div class="project-links">
-                           
-                            <a class="view-project-link" href="./email-redesign-details.html">
-                                <span class="link-icon"><img src="./assets/see-white.png" alt="open page icon"></span>
-                                <span class="link-text">See Details</span>
-
-                            </a>
-                        </div>
+                    <div class="project-image">
+                        <img src="../assets/landing-page-hero.webp" alt="">
                     </div>
-                </div>
-                <div class="project-card">
-                    <a href="./landing-page/indexthree.html" target="_blank" class="project-image"><img
-                            src="./assets/landing-page-hero.webp" alt="lady looking at laptop"></a>
-                    <div class="project-body">
-                        <h3>Email Capture Landing Page</h3>
+                    <div class="project-card-text-content">
+                        <h3 class="text-md">Email Capture Landing Page</h3>
                         <p>A responsive landing page connected to ConvertKit to capture subscribers and sync them into
                             automations.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">Javascript</span>
-                            <span class="tag">Design</span>
-                            <span class="tag">ConvertKit</span>
-
-                        </div>
-                        <div class="project-links">
-                            
-                            <a class="view-project-link" href="./email-capture-landing-page-details.html">
-                                <span class="link-icon"><img src="./assets/see-white.png" alt="open page icon"></span>
-                                <span class="link-text">See Details</span>
-
-                            </a>
-                        </div>
-
+                        
+                    </div>
+                    <div class="project-link">
+                        <a href="./landing-page.html">View Case Study <span class="arrow">--></span></a>
                     </div>
                 </div>
-                
-                
 
                 <div class="project-card">
-                    <a href="https://papatui.myshopify.com/" target="_blank" class="project-image"><img
-                            src="./assets/Dwayne_Johnson_Papatui_Home_Page_Skincare_Main.png"
-                            alt="Papatui products"></a>
-                    <div class="project-body">
-                        <h3>Custom Shopify Theme</h3>
-                        <p class="project-badge">Password Required: <span style="font-weight: 700;">eflean</span></p>
-
-                        <p>A fully custom theme with Klaviyo integration, product filtering, metafields, and all major
-                            templates built from scratch.</p>
-                        <div class="tags">
-                            <span class="tag">Shopify</span>
-                            <span class="tag">Liquid</span>
-                            <span class="tag">Tailwind CSS</span>
-                            <span class="tag">Javascript</span>
-                            <span class="tag">Klaviyo</span>
-                            <span class="tag">Metafields</span>
-                            <span class="tag">JSON Templates</span>
-
-                        </div>
-                        <div class="project-links">
-                            
-                            <a class="view-project-link" href="./custom-shopify-theme-details.html">
-                                <span class="link-icon"><img src="./assets/see-white.png" alt="open page icon"></span>
-                                <span class="link-text">See Details</span>
-
-                            </a>
-                        </div>
-
+                    <div class="project-image">
+                        <img src="../assets/mhcoffeeshop-aboutus-1.jpeg" alt="">
+                    </div>
+                    <div class="project-card-text-content">
+                        <h3 class="text-md">WordPress Site</h3>
+                        <p>Extended a WordPress site with a custom plugin, CPTs, and ACF to power a flexible,
+                            editor-friendly menu system that scales without relying on theme modifications.</p>
+                        
+                    </div>
+                    <div class="project-link">
+                        <a href="./wordpress-site.html">View Case Study <span class="arrow">--></span></a>
                     </div>
                 </div>
-                
-                
 
 
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../assets/Dwayne_Johnson_Papatui_Home_Page_Skincare_Main.png" alt="">
+                    </div>
+                    <div class="project-card-text-content">
+                        <h3 class="text-md">Custom Shopify Theme</h3>
+                        <p class="project-badge">Password Required: <span style="font-weight: 700;">eflean</span></p>
+                        <p class="">A fully custom theme with Klaviyo integration, product filtering, metafields, and
+                            all major templates built from scratch.</p>
+                        
+                    </div>
+                    <div class="project-link">
+                        <a href="./shopify-theme.html">View Case Study <span class="arrow">--></span></a>
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="brand"><a href="/">Malik Hall</a></div>
-            <p class="email-text">Email: <a href="mailto:malikhall247@gmail.com">malikhall247@gmail.com</a></p>
+    <footer class="section">
+        <div class="container footer">
+            <div class="brand text-lg">Malik Hall</div>
+            <p class="text-base">Email: <a href="mailto:malikhall247@gmail.com"
+                    style="display: inline-block; text-decoration: underline;">malikhall247@gmail.com</a></p>
             <a href="https://www.linkedin.com/in/malikhall247/" class="linkedin-social-container">
-                <span class="icon"><img src="./assets/linkedin.png" alt="LinkedIn icon"></span>
+                <span class="icon"><img src="../assets/linkedin-icon-white.png" alt="LinkedIn icon"></span>
                 <span class="text-content">LinkedIn</span>
 
             </a>
         </div>
     </footer>
 
-    <script src="app.js" defer></script>
-
-
+    <script src="./js/app.js" defer></script>
 </body>
 
 </html>

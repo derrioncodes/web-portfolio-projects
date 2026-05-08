@@ -72,10 +72,5 @@
 
 
 
-Notes: 
-Create single details page for wordpress site
+Notes:
 
-Add links and header tags to each page
-change page titles in the head
-
-put unneccessary images in another folder on my laptop and delete them from this project

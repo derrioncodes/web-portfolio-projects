@@ -766,9 +766,9 @@ footer .container.footer .brand {
         margin-bottom: 0;
     }
 
-    .hero-text-content .card-wrapper .experience-card .card-text-content {
+    /* .hero-text-content .card-wrapper .experience-card .card-text-content {
         width: 200px;
-    }
+    } */
 
     .hero-text-content .card-wrapper .experience-card:first-child {
         padding-right: 28px;

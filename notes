@@ -14,45 +14,148 @@ make videos explaining case studies (can be after publish)
 
 
 <!-- <div class="project-card">
-                    <a href="https://www.projectlthdaybreak.com/" target="_blank" class="project-image"><img
-                            src="./assets/mhcoffeeshop-aboutus-1.jpeg" alt="Wordpress site"></a>
-                    <div class="project-body">
-                        <h3>WordPress Site</h3>
-                        <p>Extended a WordPress site with a custom plugin, CPTs, and ACF to power a flexible,
-                            editor-friendly menu system that scales without relying on theme modifications.</p>
-                        <div class="tags">
-                            <span class="tag">Wordpress</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">Advanced Custom Fields</span>
-                            <span class="tag">Custom Post Types</span>
-                            <span class="tag">Custom Plugin</span>
+    <a href="https://www.projectlthdaybreak.com/" target="_blank" class="project-image"><img
+            src="./assets/mhcoffeeshop-aboutus-1.jpeg" alt="Wordpress site"></a>
+    <div class="project-body">
+        <h3>WordPress Site</h3>
+        <p>Extended a WordPress site with a custom plugin, CPTs, and ACF to power a flexible,
+            editor-friendly menu system that scales without relying on theme modifications.</p>
+        <div class="tags">
+            <span class="tag">Wordpress</span>
+            <span class="tag">PHP</span>
+            <span class="tag">Advanced Custom Fields</span>
+            <span class="tag">Custom Post Types</span>
+            <span class="tag">Custom Plugin</span>
 
-                        </div>
-                        <div class="project-links">
-                            
-                            <a class="view-project-link" href="./wordpress-site-details.html">
-                                <span class="link-icon"><img src="./assets/see-white.png" alt="open page icon"></span>
-                                <span class="link-text">See Details</span>
+        </div>
+        <div class="project-links">
+            
+            <a class="view-project-link" href="./wordpress-site-details.html">
+                <span class="link-icon"><img src="./assets/see-white.png" alt="open page icon"></span>
+                <span class="link-text">See Details</span>
 
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
+            </a>
+        </div>
+    </div>
+</div> -->
 
 
 
-                <!-- <div class="project-card">
-                    <div class="project-image">
-                        <img src="../assets/yeti-cover-img.avif" alt="">
-                    </div>
-                    <div class="project-card-text-content">
-                        <h3 class="text-md">Email Redesign</h3>
-                        <p>Redesigned a YETI marketing email for better clarity, hierarchy, and mobile performance, then rebuilt it using MJML for reliable cross-client rendering.</p>
-                        <div class="project-pills">
-                            <div class="pill text-xs">Email Design</div>
-                        </div>
-                    </div>
-                    <div class="project-link">
-                        <a href="#">View Case Study </a>
-                    </div>
-                </div> -->
+<!-- <div class="project-card">
+    <div class="project-image">
+        <img src="../assets/yeti-cover-img.avif" alt="">
+    </div>
+    <div class="project-card-text-content">
+        <h3 class="text-md">Email Redesign</h3>
+        <p>Redesigned a YETI marketing email for better clarity, hierarchy, and mobile performance, then rebuilt it using MJML for reliable cross-client rendering.</p>
+        <div class="project-pills">
+            <div class="pill text-xs">Email Design</div>
+        </div>
+    </div>
+    <div class="project-link">
+        <a href="#">View Case Study </a>
+    </div>
+</div> -->
+
+
+<!-- <section id="projects-section" class="section projects-section">
+    <div class="container">
+        <h2 class="section-heading">Featured projects</h2>
+        <div class="projects-wrapper">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="../assets/youngla-cover-img.jpg" alt="">
+                </div>
+                <div class="project-card-text-content">
+                    <h3 class="text-md">Welcome Flow + Popup</h3>
+                    <p>Designed a complete welcome flow experience, including a targeted pop-up and an 5-email
+                        sequence, focused on introducing the brand, building trust, and driving first-time
+                        conversions.</p>
+                </div>
+                <div class="project-link">
+                    <a href="./welcome-flow.html">View Case Study <span class="arrow">--></span></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="../assets/Abandon-cart-cover-image-01-lg.jpeg" alt="">
+                </div>
+                <div class="project-card-text-content">
+                    <h3 class="text-md">Abandoned Cart Recovery Flow</h3>
+                    <p>Designed a complete abandoned cart recovery flow with a segmented sequence: 7 emails for new
+                        shoppers and 5 for returning customers, reminding of items and encouraging checkout.</p>
+                    
+                </div>
+                <div class="project-link">
+                    <a href="./abandon-cart-flow.html">View Case Study <span class="arrow">--></span></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="../assets/wilde-brands_project-cover-image.jpg" alt="">
+                </div>
+                <div class="project-card-text-content">
+                    <h3 class="text-md">Campaign Calendar</h3>
+                    <p class="">Planned a full August campaign calendar for Wilde, mapping weekly email campaigns
+                        around seasonal events, product highlights, and value-driven content to engage subscribers
+                        and support brand growth.</p>
+                    
+                </div>
+                <div class="project-link">
+                    <a href="./calendar.html">View Case Study <span class="arrow">--></span></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="../assets/landing-page-hero.webp" alt="">
+                </div>
+                <div class="project-card-text-content">
+                    <h3 class="text-md">Email Capture Landing Page</h3>
+                    <p>A responsive landing page connected to ConvertKit to capture subscribers and sync them into
+                        automations.</p>
+                    
+                </div>
+                <div class="project-link">
+                    <a href="./landing-page.html">View Case Study <span class="arrow">--></span></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="../assets/mhcoffeeshop-aboutus-1.jpeg" alt="">
+                </div>
+                <div class="project-card-text-content">
+                    <h3 class="text-md">WordPress Site</h3>
+                    <p>Extended a WordPress site with a custom plugin, CPTs, and ACF to power a flexible,
+                        editor-friendly menu system that scales without relying on theme modifications.</p>
+                    
+                </div>
+                <div class="project-link">
+                    <a href="./wordpress-site.html">View Case Study <span class="arrow">--></span></a>
+                </div>
+            </div>
+
+
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="../assets/Dwayne_Johnson_Papatui_Home_Page_Skincare_Main.png" alt="">
+                </div>
+                <div class="project-card-text-content">
+                    <h3 class="text-md">Custom Shopify Theme</h3>
+                    <p class="project-badge">Password Required: <span style="font-weight: 700;">eflean</span></p>
+                    <p class="">A fully custom theme with Klaviyo integration, product filtering, metafields, and
+                        all major templates built from scratch.</p>
+                    
+                </div>
+                <div class="project-link">
+                    <a href="./shopify-theme.html">View Case Study <span class="arrow">--></span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section> -->
